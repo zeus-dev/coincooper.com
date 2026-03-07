@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetherion Exchange — Institutional-Grade Exchange Infrastructure</title>
+    <meta name="description" content="Deploy a fully operational cryptocurrency exchange under your own brand. Battle-tested microservices. Enterprise security. Launch in days, not years.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aetherion Exchange — Institutional-Grade Exchange Infrastructure">
+    <meta property="og:description" content="White-label cryptocurrency exchange platform. Launch your exchange in days with enterprise-grade security and performance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aetherion.exchange">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aetherion Exchange — Institutional-Grade Exchange Infrastructure">
+    <meta name="twitter:description" content="White-label cryptocurrency exchange platform. Launch your exchange in days.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 9v14l12 7 12-7V9L16 2z" stroke="url(#logo-gradient)" stroke-width="2" fill="none"/>
+                    <circle cx="16" cy="16" r="4" fill="url(#logo-gradient)"/>
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="4" y1="2" x2="28" y2="30">
+                            <stop offset="0%" stop-color="#6366F1"/>
+                            <stop offset="100%" stop-color="#8B5CF6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="nav-brand">Aetherion Exchange</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#platform">Platform</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#rpc-nodes">RPC Nodes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#demo" class="btn btn-primary btn-sm">Book a Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Institutional-Grade<br>
+                    <span class="gradient-text">Exchange Infrastructure</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Deploy a fully operational cryptocurrency exchange under your own brand. 
+                    Battle-tested microservices. Enterprise security. Zero compromises.
+                </p>
+                <div class="hero-cta">
+                    <a href="#demo" class="btn btn-primary btn-lg">Book a Demo</a>
+                    <a href="architecture.html" class="btn btn-ghost btn-lg">View Architecture →</a>
+                </div>
+                
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>SOC 2 Ready</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        <span>12+ Microservices</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                        <span>99.99% Uptime SLA</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                        </svg>
+                        <span>Multi-Chain Support</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="dashboard-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="mockup-title">Exchange Dashboard</div>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-chart"></div>
+                        <div class="mockup-orderbook">
+                            <div class="orderbook-row buy"></div>
+                            <div class="orderbook-row buy"></div>
+                            <div class="orderbook-row buy"></div>
+                            <div class="orderbook-row sell"></div>
+                            <div class="orderbook-row sell"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="section problem-solution">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-left fade-up">
+                    <h2 class="section-title">Building an exchange from scratch takes 18-24 months and $2M+</h2>
+                    <ul class="problem-list">
+                        <li>
+                            <span class="problem-number">1</span>
+                            <div>
+                                <strong>Matching engine complexity</strong>
+                                <p>High-frequency order matching with sub-millisecond latency requirements</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="problem-number">2</span>
+                            <div>
+                                <strong>Blockchain integration nightmares</strong>
+                                <p>Multi-chain support, deposit detection, withdrawal processing</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="problem-number">3</span>
+                            <div>
+                                <strong>Security compliance requirements</strong>
+                                <p>HSM key management, audit trails, penetration testing</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="problem-number">4</span>
+                            <div>
+                                <strong>KYC/AML infrastructure</strong>
+                                <p>Identity verification, document processing, compliance workflows</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="problem-number">5</span>
+                            <div>
+                                <strong>Real-time WebSocket feeds</strong>
+                                <p>Order book updates, trade streams, user notifications</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="problem-number">6</span>
+                            <div>
+                                <strong>Wallet management & key security</strong>
+                                <p>HD wallets, hot/cold separation, automated sweeping</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="split-right fade-up">
+                    <div class="solution-card">
+                        <h3>With Aetherion, you launch in days</h3>
+                        <ul class="solution-list">
+                            <li class="check-item">Complete trading engine ready to deploy</li>
+                            <li class="check-item">Multi-chain wallet infrastructure included</li>
+                            <li class="check-item">Enterprise security built-in</li>
+                            <li class="check-item">KYC/AML workflows pre-configured</li>
+                            <li class="check-item">Real-time WebSocket feeds operational</li>
+                            <li class="check-item">HSM-grade key management active</li>
+                            <li class="check-item">Full admin panel for management</li>
+                            <li class="check-item">White-label ready for your brand</li>
+                        </ul>
+                        <div class="solution-cta">
+                            <a href="#demo" class="btn btn-primary">See It In Action</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Overview -->
+    <section class="section platform-overview" id="platform">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Platform Overview</h2>
+                <p class="section-subtitle">Everything you need to run a world-class cryptocurrency exchange</p>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-card fade-up">
+                    <div class="bento-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Trading Engine</h3>
+                    <p>High-performance order matching with limit, market, and stop orders. Real-time order book with sub-millisecond updates.</p>
+                    <div class="bento-visual orderbook-animation"></div>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <div class="bento-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Wallet Infrastructure</h3>
+                    <p>HD wallet generation, multi-chain address management, automated sweeping, hot/cold wallet separation.</p>
+                    <div class="bento-visual wallet-animation"></div>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <div class="bento-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Blockchain Monitor</h3>
+                    <p>Real-time deposit detection, configurable confirmations, mempool monitoring, automated settlement.</p>
+                    <div class="bento-visual blockchain-animation"></div>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <div class="bento-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/>
+                            <polyline points="17 11 19 13 23 9"/>
+                        </svg>
+                    </div>
+                    <h3>KYC/AML Suite</h3>
+                    <p>Built-in identity verification workflows, document upload, compliance dashboard, user risk scoring.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <div class="bento-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Admin Command Center</h3>
+                    <p>Full administrative panel — user management, trading pair config, fee management, withdrawal approvals, system monitoring.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <div class="bento-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Everything</h3>
+                    <p>WebSocket feeds for orderbook, trades, tickers, user balances. Push notifications via Email, SMS, and in-app.</p>
+                    <div class="bento-visual pulse-animation"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="section architecture-section" id="architecture">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">The Engine Room</h2>
+                <p class="section-subtitle">Battle-tested microservices architecture powering institutional-grade exchanges</p>
+            </div>
+            
+            <div class="architecture-diagram fade-up">
+                <div class="arch-layer">
+                    <div class="arch-node gateway">
+                        <strong>TRAEFIK API GATEWAY</strong>
+                        <span>TLS 1.3 · Rate Limiting · Load Balancing</span>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="arch-node service">
+                        <strong>JANUS</strong>
+                        <span>Auth · KYC</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>APOLLO</strong>
+                        <span>Trading Engine</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>POSEIDON</strong>
+                        <span>Wallets · Keys</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>ARGOS</strong>
+                        <span>Chain · Deposits</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>ECHO</strong>
+                        <span>WebSocket Feed</span>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="arch-node kafka">
+                        <strong>APACHE KAFKA EVENT BUS</strong>
+                        <span>Event-Driven Messaging</span>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="arch-node service">
+                        <strong>HERMES</strong>
+                        <span>Notifications</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>THEMIS</strong>
+                        <span>Archive</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>AUDIT-LOG</strong>
+                        <span>Immutable Logs</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>SENTINEL</strong>
+                        <span>Admin UI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <h4>Janus <span class="service-subtitle">God of Doorways</span></h4>
+                    <p>Authentication, JWT tokens (RS256), sessions, KYC workflows, RBAC (Casbin), 2FA, user management</p>
+                    <div class="service-tech">Go · PostgreSQL · Redis</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Apollo <span class="service-subtitle">God of Order</span></h4>
+                    <p>High-frequency trading engine, order matching (limit/market/stop), balance management, fee engine, order book</p>
+                    <div class="service-tech">Go · PostgreSQL · Kafka</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Poseidon <span class="service-subtitle">God of the Sea</span></h4>
+                    <p>HD wallet generation, multi-chain address management, private key storage (via Vault), balance tracking, withdrawal approval</p>
+                    <div class="service-tech">Go · PostgreSQL · Vault</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Argos <span class="service-subtitle">All-Seeing Giant</span></h4>
+                    <p>Blockchain monitoring, deposit tracking, withdrawal processing, sweep operations, mempool monitoring, analytics</p>
+                    <div class="service-tech">Go · PostgreSQL · gRPC</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Hermes <span class="service-subtitle">Messenger God</span></h4>
+                    <p>Email/SMS/Push notifications, notification templates, delivery tracking, Kafka event consumption</p>
+                    <div class="service-tech">Go · PostgreSQL · Kafka</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Echo <span class="service-subtitle">Nymph of Sound</span></h4>
+                    <p>WebSocket real-time feeds — orderbook, trades, tickers, user streams, admin streams</p>
+                    <div class="service-tech">Go · Kafka · WebSocket</div>
+                </div>
+            </div>
+            
+            <div class="cta-banner fade-up">
+                <a href="architecture.html" class="btn btn-primary">Explore Full Architecture →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section tech-stack">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Built With Enterprise-Grade Technology</h2>
+            </div>
+            
+            <div class="tech-categories">
+                <div class="tech-category fade-up">
+                    <h3>Backend & Infrastructure</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Go (Golang)</span>
+                        <span class="tech-tag">PostgreSQL 15</span>
+                        <span class="tech-tag">Apache Kafka</span>
+                        <span class="tech-tag">Redis 7</span>
+                        <span class="tech-tag">HashiCorp Vault</span>
+                        <span class="tech-tag">gRPC + REST</span>
+                        <span class="tech-tag">HMAC-SHA256</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category fade-up">
+                    <h3>Frontend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">Real-time Feeds</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category fade-up">
+                    <h3>Security</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JWT (RS256)</span>
+                        <span class="tech-tag">Casbin RBAC</span>
+                        <span class="tech-tag">TLS 1.3 + mTLS</span>
+                        <span class="tech-tag">PostgreSQL TDE</span>
+                        <span class="tech-tag">Vault Secrets</span>
+                        <span class="tech-tag">Rate Limiting</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category fade-up">
+                    <h3>DevOps & Monitoring</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Traefik v3</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">InfluxDB</span>
+                        <span class="tech-tag">Jaeger</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+
+    <section class="section security-section" id="security">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Security Fortress</h2>
+                <p class="section-subtitle">Enterprise-grade security protecting billions in digital assets</p>
+            </div>
+            
+            <div class="security-grid">
+                <div class="security-card fade-up">
+                    <div class="security-icon">🔐</div>
+                    <h3>HSM-Grade Key Management</h3>
+                    <p>HD wallets, multi-sig support, hardware security module integration, automated key rotation</p>
+                </div>
+                
+                <div class="security-card fade-up">
+                    <div class="security-icon">🛡️</div>
+                    <h3>Zero-Trust Architecture</h3>
+                    <p>Every service authenticates every request using HMAC + JWT. No implicit trust between components</p>
+                </div>
+                
+                <div class="security-card fade-up">
+                    <div class="security-icon">📊</div>
+                    <h3>Immutable Audit Trail</h3>
+                    <p>Cryptographic hash-chain audit logging. Tamper-proof records of all system operations</p>
+                </div>
+                
+                <div class="security-card fade-up">
+                    <div class="security-icon">🔒</div>
+                    <h3>Vault-Backed Secrets</h3>
+                    <p>No hardcoded credentials. All secrets managed by HashiCorp Vault with automatic rotation</p>
+                </div>
+                
+                <div class="security-card fade-up">
+                    <div class="security-icon">🌐</div>
+                    <h3>DDoS Protection Ready</h3>
+                    <p>Rate limiting, circuit breakers, backpressure handling, automatic traffic shaping</p>
+                </div>
+                
+                <div class="security-card fade-up">
+                    <div class="security-icon">🧬</div>
+                    <h3>GDPR Compliant</h3>
+                    <p>User data export, right to deletion, data retention policies, privacy by design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- White-Label Section -->
+    <section class="section white-label-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Your Brand, Our Engine</h2>
+                <p class="section-subtitle">Complete white-label customization for your exchange</p>
+            </div>
+            
+            <div class="customization-grid">
+                <div class="customization-item fade-up">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m18.2 5.2l-4.2-4.2m0-6l4.2-4.2"/>
+                    </svg>
+                    <h3>Logo & Brand Colors</h3>
+                    <p>Full theme customization matching your brand identity</p>
+                </div>
+                
+                <div class="customization-item fade-up">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <h3>Custom Domain</h3>
+                    <p>Deploy on your own domain (e.g., exchange.yourcompany.com)</p>
+                </div>
+                
+                <div class="customization-item fade-up">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <h3>Email Templates</h3>
+                    <p>Branded notification emails and transactional messages</p>
+                </div>
+                
+                <div class="customization-item fade-up">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                    <h3>Fee Structure</h3>
+                    <p>Configure maker/taker fees, withdrawal fees, custom pricing tiers</p>
+                </div>
+                
+                <div class="customization-item fade-up">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                    <h3>Trading Pairs</h3>
+                    <p>Select which cryptocurrencies and trading pairs to offer</p>
+                </div>
+                
+                <div class="customization-item fade-up">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/>
+                        <polyline points="17 11 19 13 23 9"/>
+                    </svg>
+                    <h3>KYC Workflows</h3>
+                    <p>Customize verification levels and compliance requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RPC Nodes Section -->
+    <section class="section rpc-section" id="rpc-nodes">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Enterprise-Grade RPC Nodes</h2>
+                <p class="section-subtitle">Reliable Blockchain Access at Scale</p>
+            </div>
+            
+            <div class="rpc-intro fade-up">
+                <p class="rpc-description">
+                    Dedicated, low-latency RPC endpoints for EVM and non-EVM chains. 
+                    No rate limits. No shared infrastructure. Your nodes, your performance.
+                </p>
+            </div>
+            
+            <div class="rpc-features">
+                <div class="rpc-feature fade-up">
+                    <div class="rpc-icon">⚡</div>
+                    <h3>Dedicated Nodes</h3>
+                    <p>Not shared, guaranteed performance</p>
+                </div>
+                
+                <div class="rpc-feature fade-up">
+                    <div class="rpc-icon">🌍</div>
+                    <h3>Multi-Region</h3>
+                    <p>Low latency globally</p>
+                </div>
+                
+                <div class="rpc-feature fade-up">
+                    <div class="rpc-icon">📈</div>
+                    <h3>Auto-Scaling</h3>
+                    <p>Handle traffic spikes automatically</p>
+                </div>
+                
+                <div class="rpc-feature fade-up">
+                    <div class="rpc-icon">🔗</div>
+                    <h3>Multi-Chain</h3>
+                    <p>Ethereum, BSC, Polygon, Solana, Bitcoin & more</p>
+                </div>
+                
+                <div class="rpc-feature fade-up">
+                    <div class="rpc-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Request volume, latency, error rates</p>
+                </div>
+                
+                <div class="rpc-feature fade-up">
+                    <div class="rpc-icon">🛡️</div>
+                    <h3>99.99% Uptime SLA</h3>
+                    <p>Enterprise-grade reliability</p>
+                </div>
+            </div>
+            
+            <div class="chains-marquee fade-up">
+                <h3>Supported Chains</h3>
+                <div class="marquee">
+                    <div class="marquee-content">
+                        <span class="chain-badge">Ethereum</span>
+                        <span class="chain-badge">BNB Smart Chain</span>
+                        <span class="chain-badge">Polygon</span>
+                        <span class="chain-badge">Arbitrum</span>
+                        <span class="chain-badge">Optimism</span>
+                        <span class="chain-badge">Avalanche</span>
+                        <span class="chain-badge">Solana</span>
+                        <span class="chain-badge">Bitcoin</span>
+                        <span class="chain-badge">Base</span>
+                        <span class="chain-badge">Fantom</span>
+                        <span class="chain-badge">Ethereum</span>
+                        <span class="chain-badge">BNB Smart Chain</span>
+                        <span class="chain-badge">Polygon</span>
+                        <span class="chain-badge">Arbitrum</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-banner fade-up">
+                <a href="rpc-nodes.html" class="btn btn-primary">Learn More About RPC Nodes →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-up">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Microservices</div>
+                    <div class="stat-description">Battle-tested architecture</div>
+                </div>
+                
+                <div class="stat-card fade-up">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">API Endpoints</div>
+                    <div class="stat-description">Comprehensive coverage</div>
+                </div>
+                
+                <div class="stat-card fade-up">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-suffix">ms</div>
+                    <div class="stat-label">Order Matching</div>
+                    <div class="stat-description">Sub-millisecond latency</div>
+                </div>
+                
+                <div class="stat-card fade-up">
+                    <div class="stat-number" data-target="99.99">0</div>
+                    <div class="stat-suffix">%</div>
+                    <div class="stat-label">Uptime SLA</div>
+                    <div class="stat-description">Enterprise reliability</div>
+                </div>
+                
+                <div class="stat-card fade-up">
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Blockchains</div>
+                    <div class="stat-description">EVM + UTXO supported</div>
+                </div>
+                
+                <div class="stat-card fade-up">
+                    <div class="stat-number" data-target="0">0</div>
+                    <div class="stat-label">Single Points of Failure</div>
+                    <div class="stat-description">Fully redundant</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Why Choose Aetherion</h2>
+            </div>
+            
+            <div class="comparison-table-wrapper fade-up">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight">Aetherion Exchange</th>
+                            <th>Build In-House</th>
+                            <th>Competitor X</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Time to Launch</td>
+                            <td class="highlight">Days–Weeks</td>
+                            <td>18–24 months</td>
+                            <td>Months</td>
+                        </tr>
+                        <tr>
+                            <td>Cost</td>
+                            <td class="highlight">Monthly SaaS fee</td>
+                            <td>$2M+</td>
+                            <td>High license fee</td>
+                        </tr>
+                        <tr>
+                            <td>Microservices Architecture</td>
+                            <td class="highlight">✅ 12+ services</td>
+                            <td>❌ Usually monolith</td>
+                            <td>⚠️ Partial</td>
+                        </tr>
+                        <tr>
+                            <td>Event-Driven (Kafka)</td>
+                            <td class="highlight">✅</td>
+                            <td>❌</td>
+                            <td>⚠️</td>
+                        </tr>
+                        <tr>
+                            <td>Dedicated DB Per Service</td>
+                            <td class="highlight">✅</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>HSM Key Management</td>
+                            <td class="highlight">✅</td>
+                            <td>❌</td>
+                            <td>⚠️</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time WebSockets</td>
+                            <td class="highlight">✅</td>
+                            <td>⚠️</td>
+                            <td>⚠️</td>
+                        </tr>
+                        <tr>
+                            <td>Immutable Audit Logs</td>
+                            <td class="highlight">✅</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Full Admin Panel</td>
+                            <td class="highlight">✅</td>
+                            <td>⚠️ Partial</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Prometheus + Grafana</td>
+                            <td class="highlight">✅</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Source Code Access</td>
+                            <td class="highlight">✅ Enterprise tier</td>
+                            <td>—</td>
+                            <td>❌ Usually not</td>
+                        </tr>
+                        <tr>
+                            <td>Custom Branding</td>
+                            <td class="highlight">✅ Full</td>
+                            <td>—</td>
+                            <td>⚠️ Limited</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Pricing</h2>
+                <p class="section-subtitle">Flexible plans for every stage of growth</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card fade-up">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-description">For startups launching their first exchange</div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">✓ Full platform access</div>
+                        <div class="pricing-feature">✓ Up to 10,000 users</div>
+                        <div class="pricing-feature">✓ 5 trading pairs</div>
+                        <div class="pricing-feature">✓ Email support</div>
+                    </div>
+                </div>
+                
+                <div class="pricing-card featured fade-up">
+                    <div class="pricing-badge">Popular</div>
+                    <div class="pricing-tier">Professional</div>
+                    <div class="pricing-description">For growing businesses needing scale</div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">✓ Everything in Starter</div>
+                        <div class="pricing-feature">✓ Unlimited users</div>
+                        <div class="pricing-feature">✓ Unlimited trading pairs</div>
+                        <div class="pricing-feature">✓ Priority support</div>
+                        <div class="pricing-feature">✓ Custom branding</div>
+                    </div>
+                </div>
+                
+                <div class="pricing-card fade-up">
+                    <div class="pricing-tier">Enterprise</div>
+                    <div class="pricing-description">For institutions requiring full customization</div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">✓ Everything in Professional</div>
+                        <div class="pricing-feature">✓ Source code access</div>
+                        <div class="pricing-feature">✓ Dedicated infrastructure</div>
+                        <div class="pricing-feature">✓ 24/7 support</div>
+                        <div class="pricing-feature">✓ Custom SLA</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-overlay">
+                <div class="pricing-coming-soon">
+                    <h3>Coming Soon</h3>
+                    <p>Pricing will be announced Q2 2026. Join the waitlist for exclusive early-access rates.</p>
+                    <form class="waitlist-form" id="waitlistForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Join Waitlist</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section cta-section" id="demo">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2>Ready to Launch Your Exchange?</h2>
+                <p>Schedule a demo and see Aetherion Exchange in action</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Demo</a>
+                    <a href="architecture.html" class="btn btn-ghost btn-lg">View Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#platform">Exchange Platform</a></li>
+                        <li><a href="rpc-nodes.html">RPC Nodes</a></li>
+                        <li><a href="#architecture">Admin Panel</a></li>
+                        <li><a href="architecture.html">API Docs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Developers</h4>
+                    <ul>
+                        <li><a href="architecture.html">Documentation</a></li>
+                        <li><a href="architecture.html">API Reference</a></li>
+                        <li><a href="#">System Status</a></li>
+                        <li><a href="architecture.html">Architecture</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog (Coming Soon)</a></li>
+                        <li><a href="#">Careers (Coming Soon)</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Discord">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2026 Zeus Dev. All rights reserved.</p>
+                    <p class="footer-tagline">Built with 🔥 by <a href="https://coincooper.com">coincooper.com</a> — Powering the Future of Digital Asset Exchange</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

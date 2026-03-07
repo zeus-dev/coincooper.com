@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture — Aetherion Exchange</title>
+    <meta name="description" content="Deep dive into Aetherion Exchange's microservices architecture. Battle-tested, event-driven, enterprise-grade infrastructure.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="nav scrolled" id="mainNav">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 9v14l12 7 12-7V9L16 2z" stroke="url(#logo-gradient)" stroke-width="2" fill="none"/>
+                    <circle cx="16" cy="16" r="4" fill="url(#logo-gradient)"/>
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="4" y1="2" x2="28" y2="30">
+                            <stop offset="0%" stop-color="#6366F1"/>
+                            <stop offset="100%" stop-color="#8B5CF6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="nav-brand">Aetherion Exchange</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#platform">Platform</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="rpc-nodes.html">RPC Nodes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 140px;">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h1 class="section-title">System Architecture</h1>
+                <p class="section-subtitle">A deep dive into the microservices architecture powering institutional-grade exchanges</p>
+            </div>
+            
+            <div class="architecture-diagram fade-up">
+                <div class="arch-layer">
+                    <div class="arch-node gateway">
+                        <strong>TRAEFIK API GATEWAY</strong>
+                        <span>TLS 1.3 · Rate Limiting · Load Balancing</span>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="arch-node service">
+                        <strong>JANUS</strong>
+                        <span>Auth · KYC</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>APOLLO</strong>
+                        <span>Trading Engine</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>POSEIDON</strong>
+                        <span>Wallets · Keys</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>ARGOS</strong>
+                        <span>Chain · Deposits</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>ECHO</strong>
+                        <span>WebSocket Feed</span>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="arch-node kafka">
+                        <strong>APACHE KAFKA EVENT BUS</strong>
+                        <span>Event-Driven Messaging</span>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="arch-node service">
+                        <strong>HERMES</strong>
+                        <span>Notifications</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>THEMIS</strong>
+                        <span>Archive</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>AUDIT-LOG</strong>
+                        <span>Immutable Logs</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>SENTINEL</strong>
+                        <span>Admin UI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-header fade-up" style="margin-top: 80px;">
+                <h2 class="section-title">Microservices Breakdown</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <h4>Janus <span class="service-subtitle">God of Doorways</span></h4>
+                    <p>Authentication gateway handling JWT tokens (RS256), user sessions, KYC workflows, role-based access control (Casbin), 2FA, and comprehensive user management.</p>
+                    <div class="service-tech">Go · PostgreSQL (janus_db) · Redis · Casbin</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Apollo <span class="service-subtitle">God of Order</span></h4>
+                    <p>High-frequency trading engine with sub-10ms order matching for limit, market, and stop orders. Manages balance ledgers, fee calculations, and real-time order books.</p>
+                    <div class="service-tech">Go · PostgreSQL (apollo_db) · Kafka · gRPC</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Poseidon <span class="service-subtitle">God of the Sea</span></h4>
+                    <p>HD wallet generation and multi-chain address management. Private key storage via HashiCorp Vault, balance tracking, and withdrawal approval workflows.</p>
+                    <div class="service-tech">Go · PostgreSQL (poseidon_db) · Vault · gRPC</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Argos <span class="service-subtitle">All-Seeing Giant</span></h4>
+                    <p>Blockchain monitoring service tracking deposits across 200+ chains, withdrawal processing, automated sweep operations, mempool monitoring, and on-chain analytics.</p>
+                    <div class="service-tech">Go · PostgreSQL (argos_db) · Kafka · gRPC</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Hermes <span class="service-subtitle">Messenger God</span></h4>
+                    <p>Multi-channel notification service supporting Email, SMS, and Push notifications. Template management, delivery tracking, and Kafka event consumption.</p>
+                    <div class="service-tech">Go · PostgreSQL (hermes_db) · Kafka · SMTP/Twilio</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Echo <span class="service-subtitle">Nymph of Sound</span></h4>
+                    <p>Real-time WebSocket feeds delivering order book updates, trade streams, ticker data, user balance changes, and admin system events.</p>
+                    <div class="service-tech">Go · Kafka · WebSocket · Stateless</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Themis <span class="service-subtitle">Titan of Justice</span></h4>
+                    <p>Data retention and archival service implementing compliance policies, scheduled order archival, and regulatory reporting capabilities.</p>
+                    <div class="service-tech">Go · PostgreSQL (themis_db) · Cron</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Vault Manager <span class="service-subtitle">Guardian of Secrets</span></h4>
+                    <p>HashiCorp Vault integration for cryptographic key generation, automatic key rotation, encryption services, and AppRole authentication.</p>
+                    <div class="service-tech">Go · Vault · gRPC</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Sentinel <span class="service-subtitle">The Watchman</span></h4>
+                    <p>Comprehensive admin panel built with Next.js for user management, trading pair configuration, system monitoring, withdrawal approvals, and operational oversight.</p>
+                    <div class="service-tech">Next.js · React · REST API</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Audit-Log <span class="service-subtitle">The Recorder</span></h4>
+                    <p>Immutable audit logging with cryptographic hash chain verification. gRPC interface for tamper-proof recording of all critical system operations.</p>
+                    <div class="service-tech">Go · PostgreSQL (audit_log) · gRPC · SHA-256</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Fiat-Rates <span class="service-subtitle">The Converter</span></h4>
+                    <p>Real-time fiat/crypto exchange rate aggregation from multiple sources (CoinGecko, CryptoCompare). Multi-source validation and caching.</p>
+                    <div class="service-tech">Go · PostgreSQL (fiat_rates) · Redis · REST</div>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <h4>Agora <span class="service-subtitle">The Marketplace</span></h4>
+                    <p>User-facing exchange interface built with Next.js. Real-time trading, portfolio management, order history, and account settings.</p>
+                    <div class="service-tech">Next.js · React · WebSocket · REST API</div>
+                </div>
+            </div>
+            
+            <div class="section-header fade-up" style="margin-top: 120px;">
+                <h2 class="section-title">Key Architectural Principles</h2>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-card fade-up">
+                    <h3>Database Per Service</h3>
+                    <p>Each microservice owns its database, ensuring data isolation, independent scaling, and technology flexibility. No shared databases, no tight coupling.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <h3>Event-Driven Architecture</h3>
+                    <p>Apache Kafka enables asynchronous communication between services. Events are published once and consumed by multiple services, ensuring loose coupling and scalability.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <h3>Zero-Trust Security</h3>
+                    <p>Every service-to-service call is authenticated using HMAC-SHA256. No implicit trust. JWT tokens for user authentication with RS256 signing.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <h3>Observability First</h3>
+                    <p>Prometheus metrics, Grafana dashboards, Jaeger distributed tracing, and structured logging with correlation IDs across all services.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <h3>API Gateway Pattern</h3>
+                    <p>Traefik v3 handles TLS termination, rate limiting, load balancing, and request routing. Single entry point for all external traffic.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <h3>Immutable Infrastructure</h3>
+                    <p>Docker containers, versioned database migrations (Goose), infrastructure as code. No manual server configuration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2>Ready to Build on This Architecture?</h2>
+                <p>Schedule a technical deep-dive with our engineering team</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Schedule Technical Demo</a>
+                    <a href="index.html" class="btn btn-ghost btn-lg">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="index.html#platform">Exchange Platform</a></li>
+                        <li><a href="rpc-nodes.html">RPC Nodes</a></li>
+                        <li><a href="architecture.html">Architecture</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2026 Zeus Dev. All rights reserved.</p>
+                    <p class="footer-tagline">Built with 🔥 by <a href="https://coincooper.com">coincooper.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
