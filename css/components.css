@@ -25,16 +25,25 @@
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-weight: 700;
-    font-size: 1.125rem;
+    gap: 0;
 }
 
-.nav-brand {
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.nav-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-brand-text {
+    display: none;
+}
+
+.nav-brand-company {
+    display: none;
+}
+
+.nav-brand-product {
+    display: none;
 }
 
 .nav-toggle {
