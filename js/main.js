@@ -1,27 +1,101 @@
 // ===== MAIN JAVASCRIPT - BILLION DOLLAR SAAS =====
 document.addEventListener('DOMContentLoaded', function() {
-    // Waitlist form handling - opens email client
+    // Waitlist form handling with Formspree (AJAX)
     const waitlistForm = document.getElementById('waitlistForm');
     if (waitlistForm) {
-        waitlistForm.addEventListener('submit', function(e) {
+        waitlistForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            const email = this.querySelector('input[name="email"]').value;
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.textContent;
+            const form = this;
+            const successMsg = form.parentElement.querySelector('.waitlist-success');
             
-            // Open email client with pre-filled content
-            const subject = encodeURIComponent('Waitlist Signup - Aetherion Exchange');
-            const body = encodeURIComponent(`Hello,\n\nI would like to join the waitlist for Aetherion Exchange.\n\nMy email: ${email}\n\nThank you!`);
+            button.textContent = 'Joining...';
+            button.disabled = true;
             
-            window.location.href = `mailto:admin@coincooper.com?subject=${subject}&body=${body}`;
+            try {
+                const response = await fetch('https://formspree.io/f/mqeyayzb', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ email: form.querySelector('input[name="email"]').value })
+                });
+                
+                if (response.ok) {
+                    form.style.display = 'none';
+                    successMsg.style.display = 'block';
+                    successMsg.classList.add('fade-up');
+                } else {
+                    throw new Error('Failed');
+                }
+            } catch (error) {
+                button.textContent = 'Error! Try Again';
+                button.style.background = 'var(--error)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    button.style.background = '';
+                }, 3000);
+            }
+        });
+    }
+    
+    // Contact form handling with Formspree (AJAX)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const button = this.querySelector('.form-submit');
+            const originalText = button.textContent;
+            const form = this;
             
-            button.textContent = '✓ Opening Email...';
-            button.style.background = 'var(--success)';
+            button.textContent = 'Sending...';
+            button.disabled = true;
             
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.style.background = '';
-            }, 3000);
+            try {
+                const formData = {
+                    name: form.querySelector('#name').value,
+                    email: form.querySelector('#email').value,
+                    company: form.querySelector('#company').value,
+                    interest: form.querySelector('#interest').value,
+                    message: form.querySelector('#message').value
+                };
+                
+                const response = await fetch('https://formspree.io/f/mqeyayzb', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    button.textContent = '✓ Sent!';
+                    button.style.background = 'var(--success)';
+                    form.reset();
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.disabled = false;
+                        button.style.background = '';
+                    }, 4000);
+                } else {
+                    throw new Error('Failed');
+                }
+            } catch (error) {
+                button.textContent = 'Error! Try Again';
+                button.style.background = 'var(--error)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    button.style.background = '';
+                }, 3000);
+            }
         });
     }
     
