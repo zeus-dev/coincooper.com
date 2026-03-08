@@ -6,30 +6,33 @@ document.addEventListener('DOMContentLoaded', function() {
         waitlistForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             const button = this.querySelector('button[type="submit"]');
+            const input = this.querySelector('input[name="email"]');
             const originalText = button.textContent;
+            const email = input.value;
             
             button.textContent = 'Joining...';
             button.disabled = true;
             
             try {
-                const response = await fetch(this.action, {
+                const response = await fetch('https://formspree.io/f/mqeyayzb', {
                     method: 'POST',
-                    body: new FormData(this),
                     headers: {
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
-                    }
+                    },
+                    body: JSON.stringify({ email: email })
                 });
                 
-                if (response.ok) {
+                if (response.ok || response.redirected) {
                     button.textContent = '✓ Joined!';
                     button.style.background = 'var(--success)';
-                    this.reset();
+                    input.value = '';
                     
                     setTimeout(() => {
                         button.textContent = originalText;
                         button.disabled = false;
                         button.style.background = '';
-                    }, 3000);
+                    }, 4000);
                 } else {
                     throw new Error('Form submission failed');
                 }
