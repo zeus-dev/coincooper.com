@@ -1,32 +1,48 @@
 // ===== MAIN JAVASCRIPT - BILLION DOLLAR SAAS =====
 document.addEventListener('DOMContentLoaded', function() {
-    // Waitlist form handling with enhanced feedback
+    // Waitlist form handling with Formspree
     const waitlistForm = document.getElementById('waitlistForm');
     if (waitlistForm) {
-        waitlistForm.addEventListener('submit', function(e) {
+        waitlistForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.textContent;
             
-            // Show loading state
             button.textContent = 'Joining...';
             button.disabled = true;
             
-            // Simulate API call
-            setTimeout(() => {
-                // Show success message
-                button.textContent = '✓ Joined!';
-                button.style.background = 'var(--success)';
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
                 
-                // Reset form after delay
-                setTimeout(() => {
+                if (response.ok) {
+                    button.textContent = '✓ Joined!';
+                    button.style.background = 'var(--success)';
                     this.reset();
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.disabled = false;
+                        button.style.background = '';
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                button.textContent = 'Error! Try Again';
+                button.style.background = 'var(--error)';
+                
+                setTimeout(() => {
                     button.textContent = originalText;
                     button.disabled = false;
                     button.style.background = '';
                 }, 3000);
-            }, 1500);
+            }
         });
     }
     
