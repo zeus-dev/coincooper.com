@@ -823,6 +823,21 @@
     color: var(--text-muted);
 }
 
+.waitlist-note {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.waitlist-note a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+}
+
+.waitlist-note a:hover {
+    color: var(--accent-secondary);
+}
+
 /* ===== CTA SECTION ===== */
 .cta-section {
     background: var(--accent-gradient);
