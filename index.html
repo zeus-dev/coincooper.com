@@ -121,13 +121,61 @@
                         <div class="mockup-title">Exchange Dashboard</div>
                     </div>
                     <div class="mockup-content">
-                        <div class="mockup-chart"></div>
-                        <div class="mockup-orderbook">
-                            <div class="orderbook-row buy"></div>
-                            <div class="orderbook-row buy"></div>
-                            <div class="orderbook-row buy"></div>
-                            <div class="orderbook-row sell"></div>
-                            <div class="orderbook-row sell"></div>
+                        <div class="mockup-sidebar">
+                            <div class="mockup-pair active">
+                                <div class="pair-name">BTC/USDT</div>
+                                <div class="pair-price">$67,234</div>
+                            </div>
+                            <div class="mockup-pair">
+                                <div class="pair-name">ETH/USDT</div>
+                                <div class="pair-price down">$3,456</div>
+                            </div>
+                            <div class="mockup-pair">
+                                <div class="pair-name">SOL/USDT</div>
+                                <div class="pair-price">$178.45</div>
+                            </div>
+                            <div class="mockup-pair">
+                                <div class="pair-name">XRP/USDT</div>
+                                <div class="pair-price">$0.5234</div>
+                            </div>
+                        </div>
+                        <div class="mockup-chart">
+                            <div class="chart-header">
+                                <span class="chart-symbol">BTC/USDT</span>
+                                <span class="chart-price">$67,234.56</span>
+                            </div>
+                            <div class="chart-area">
+                                <div class="chart-grid">
+                                    <div class="chart-grid-line"></div>
+                                    <div class="chart-grid-line"></div>
+                                    <div class="chart-grid-line"></div>
+                                    <div class="chart-grid-line"></div>
+                                </div>
+                                <div class="chart-line">
+                                    <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                                        <defs>
+                                            <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+                                                <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="area" d="M0,45 L20,42 L40,48 L60,35 L80,38 L100,28 L120,32 L140,22 L160,25 L180,18 L200,15 L200,60 L0,60 Z"/>
+                                        <path d="M0,45 L20,42 L40,48 L60,35 L80,38 L100,28 L120,32 L140,22 L160,25 L180,18 L200,15"/>
+                                    </svg>
+                                </div>
+                                <div class="chart-volume">
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                    <div class="volume-bar"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -444,6 +492,7 @@
                     <h3>DevOps & Monitoring</h3>
                     <div class="tech-tags">
                         <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
                         <span class="tech-tag">Traefik v3</span>
                         <span class="tech-tag">Prometheus</span>
                         <span class="tech-tag">Grafana</span>
@@ -465,41 +514,110 @@
                 <p class="section-subtitle">Enterprise-grade security protecting billions in digital assets</p>
             </div>
             
-            <div class="security-grid">
-                <div class="security-card fade-up">
-                    <div class="security-icon">🔐</div>
-                    <h3>HSM-Grade Key Management</h3>
-                    <p>HD wallets, multi-sig support, hardware security module integration, automated key rotation</p>
+            <div class="security-visual">
+                <div class="security-shield">
+                    <div class="shield-layer layer-1">
+                        <svg viewBox="0 0 200 220" fill="none">
+                            <path d="M100 10L20 50v60c0 55 80 100 80 100s80-45 80-100V50L100 10z" stroke="url(#shieldGrad)" stroke-width="2" fill="url(#shieldFill)"/>
+                            <defs>
+                                <linearGradient id="shieldGrad" x1="0" y1="0" x2="200" y2="220">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="50%" stop-color="#8b5cf6"/>
+                                    <stop offset="100%" stop-color="#a78bfa"/>
+                                </linearGradient>
+                                <linearGradient id="shieldFill" x1="0" y1="0" x2="200" y2="220">
+                                    <stop offset="0%" stop-color="rgba(99,102,241,0.1)"/>
+                                    <stop offset="100%" stop-color="rgba(99,102,241,0.05)"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="shield-layer layer-2">
+                        <div class="security-feature-item">
+                            <div class="feature-icon">🔐</div>
+                            <div class="feature-text">
+                                <h4>HSM-Grade Key Management</h4>
+                                <p>HD wallets, multi-sig, HSM integration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shield-layer layer-3">
+                        <div class="security-feature-item">
+                            <div class="feature-icon">🛡️</div>
+                            <div class="feature-text">
+                                <h4>Zero-Trust Architecture</h4>
+                                <p>HMAC + JWT authentication</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shield-layer layer-4">
+                        <div class="security-feature-item">
+                            <div class="feature-icon">📊</div>
+                            <div class="feature-text">
+                                <h4>Immutable Audit Trail</h4>
+                                <p>Cryptographic hash-chain logging</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shield-layer layer-5">
+                        <div class="security-feature-item">
+                            <div class="feature-icon">🔒</div>
+                            <div class="feature-text">
+                                <h4>Vault-Backed Secrets</h4>
+                                <p>HashiCorp Vault with rotation</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="security-card fade-up">
-                    <div class="security-icon">🛡️</div>
-                    <h3>Zero-Trust Architecture</h3>
-                    <p>Every service authenticates every request using HMAC + JWT. No implicit trust between components</p>
-                </div>
-                
-                <div class="security-card fade-up">
-                    <div class="security-icon">📊</div>
-                    <h3>Immutable Audit Trail</h3>
-                    <p>Cryptographic hash-chain audit logging. Tamper-proof records of all system operations</p>
-                </div>
-                
-                <div class="security-card fade-up">
-                    <div class="security-icon">🔒</div>
-                    <h3>Vault-Backed Secrets</h3>
-                    <p>No hardcoded credentials. All secrets managed by HashiCorp Vault with automatic rotation</p>
-                </div>
-                
-                <div class="security-card fade-up">
-                    <div class="security-icon">🌐</div>
-                    <h3>DDoS Protection Ready</h3>
-                    <p>Rate limiting, circuit breakers, backpressure handling, automatic traffic shaping</p>
-                </div>
-                
-                <div class="security-card fade-up">
-                    <div class="security-icon">🧬</div>
-                    <h3>GDPR Compliant</h3>
-                    <p>User data export, right to deletion, data retention policies, privacy by design</p>
+                <div class="security-features-grid">
+                    <div class="security-feature-card fade-up">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-lg">🔐</div>
+                        <h3>HSM-Grade Key Management</h3>
+                        <p>HD wallets, multi-sig support, hardware security module integration, automated key rotation</p>
+                        <div class="feature-tag">Keys</div>
+                    </div>
+                    
+                    <div class="security-feature-card fade-up">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-lg">🛡️</div>
+                        <h3>Zero-Trust Architecture</h3>
+                        <p>Every service authenticates every request using HMAC + JWT. No implicit trust between components</p>
+                        <div class="feature-tag">Network</div>
+                    </div>
+                    
+                    <div class="security-feature-card fade-up">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-lg">📊</div>
+                        <h3>Immutable Audit Trail</h3>
+                        <p>Cryptographic hash-chain audit logging. Tamper-proof records of all system operations</p>
+                        <div class="feature-tag">Compliance</div>
+                    </div>
+                    
+                    <div class="security-feature-card fade-up">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-lg">🔒</div>
+                        <h3>Vault-Backed Secrets</h3>
+                        <p>No hardcoded credentials. All secrets managed by HashiCorp Vault with automatic rotation</p>
+                        <div class="feature-tag">Secrets</div>
+                    </div>
+                    
+                    <div class="security-feature-card fade-up">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-lg">🌐</div>
+                        <h3>DDoS Protection Ready</h3>
+                        <p>Rate limiting, circuit breakers, backpressure handling, automatic traffic shaping</p>
+                        <div class="feature-tag">Infrastructure</div>
+                    </div>
+                    
+                    <div class="security-feature-card fade-up">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-lg">🧬</div>
+                        <h3>GDPR Compliant</h3>
+                        <p>User data export, right to deletion, data retention policies, privacy by design</p>
+                        <div class="feature-tag">Privacy</div>
+                    </div>
                 </div>
             </div>
         </div>
