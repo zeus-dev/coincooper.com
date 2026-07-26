@@ -419,14 +419,14 @@
 @media (max-width: 900px) {
     .home-hero {
         min-height: auto;
-        padding: 96px 0 48px;
+        padding: 96px 0 40px;
         overflow: visible;
         align-items: flex-start;
     }
 
     .home-hero-inner {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 0;
         text-align: center;
     }
 
@@ -465,17 +465,8 @@
         width: 100%;
     }
 
-    /* Nav already shows brand — keep hero logo small so headline fits first screen */
+    /* Nav already carries the brand — drop the duplicate hero mark on phones */
     .home-hero-visual {
-        order: -1;
-        margin: 0 auto 4px;
-    }
-
-    .home-hero-logo {
-        width: min(96px, 28vw);
-    }
-
-    .home-hero-visual::before {
         display: none;
     }
 

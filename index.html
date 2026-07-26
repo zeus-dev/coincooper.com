@@ -29,7 +29,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 
-    <link rel="stylesheet" href="css/bundle-home.css?v=4">
+    <link rel="stylesheet" href="css/bundle-home.css?v=5">
 </head>
 <body class="home-page">
     <nav class="nav" id="mainNav">
@@ -84,14 +84,16 @@
 
             <div class="home-hero-visual" aria-hidden="true">
                 <picture>
-                    <source type="image/webp" srcset="assets/brand/logo-nav.webp 160w, assets/brand/logo-hero.webp 480w" sizes="(max-width: 900px) 96px, 420px">
+                    <source media="(min-width: 901px)" type="image/webp" srcset="assets/brand/logo-hero.webp">
+                    <source media="(min-width: 901px)" srcset="assets/brand/logo-hero.png">
                     <img
-                        src="assets/brand/logo-hero.png"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                         alt=""
                         class="home-hero-logo"
                         width="420"
                         height="420"
                         decoding="async"
+                        loading="lazy"
                     >
                 </picture>
             </div>
