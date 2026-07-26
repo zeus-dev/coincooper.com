@@ -23,14 +23,13 @@
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#05070a">
     <link rel="preload" as="image" href="assets/brand/logo-nav.webp" type="image/webp">
-    <link rel="preload" as="image" href="assets/brand/logo-hero.webp" type="image/webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 
-    <link rel="stylesheet" href="css/bundle-home.css?v=2">
+    <link rel="stylesheet" href="css/bundle-home.css?v=3">
 </head>
 <body class="home-page">
     <nav class="nav" id="mainNav">
@@ -85,14 +84,13 @@
 
             <div class="home-hero-visual" aria-hidden="true">
                 <picture>
-                    <source type="image/webp" srcset="assets/brand/logo-hero.webp">
+                    <source type="image/webp" srcset="assets/brand/logo-nav.webp 160w, assets/brand/logo-hero.webp 480w" sizes="(max-width: 900px) 96px, 420px">
                     <img
                         src="assets/brand/logo-hero.png"
                         alt=""
                         class="home-hero-logo"
                         width="420"
                         height="420"
-                        fetchpriority="high"
                         decoding="async"
                     >
                 </picture>
@@ -196,6 +194,6 @@
         </div>
     </footer>
 
-    <script src="js/site-core.js?v=2" defer></script>
+    <script src="js/site-core.js?v=3" defer></script>
 </body>
 </html>
