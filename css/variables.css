@@ -353,44 +353,44 @@ a {
 
 /* ===== ANIMATIONS ===== */
 
-/* Fade Up */
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Fade In */
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-}
-
-/* Scale In */
+/* Fade Up / In — visible by default (mobile + no-JS safe) */
+.fade-up,
+.fade-in,
 .scale-in {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
-.scale-in.visible {
-    opacity: 1;
-    transform: scale(1);
+@media (min-width: 769px) {
+    html.anim-ready .fade-up:not(.visible) {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    html.anim-ready .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    html.anim-ready .fade-in:not(.visible) {
+        opacity: 0;
+    }
+    html.anim-ready .fade-in.visible {
+        opacity: 1;
+    }
+    html.anim-ready .scale-in:not(.visible) {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    html.anim-ready .scale-in.visible {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Stagger Children */
 .stagger-children > * {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 

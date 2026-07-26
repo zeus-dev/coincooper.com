@@ -1,0 +1,38 @@
+/* Mobile / load performance */
+
+@media (max-width: 768px) {
+    .home-orb,
+    .gradient-orb {
+        animation: none !important;
+        filter: blur(48px) !important;
+        opacity: 0.45;
+    }
+
+    .home-hero-logo {
+        animation: none !important;
+        filter: drop-shadow(0 16px 32px rgba(0, 100, 200, 0.35)) !important;
+    }
+
+    .home-hero-visual::before {
+        filter: none !important;
+    }
+
+    .nav.scrolled {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-orb,
+    .gradient-orb,
+    .home-hero-logo {
+        animation: none !important;
+    }
+}
+
+.nav-logo-img {
+    height: 52px;
+    width: auto;
+    max-width: 160px;
+}

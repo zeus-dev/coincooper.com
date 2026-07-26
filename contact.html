@@ -12,18 +12,14 @@
     <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#05070a">
+    <link rel="preload" as="image" href="assets/brand/logo-nav.webp" type="image/webp">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
     
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bundle-site.css?v=2">
     
     <style>
         .contact-form {
@@ -138,7 +134,10 @@
     <nav class="nav scrolled" id="mainNav">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo" aria-label="CoinCooper home">
-                <img src="Coincooper-transparant.png" alt="CoinCooper" class="nav-logo-img">
+                <picture>
+                    <source type="image/webp" srcset="assets/brand/logo-nav.webp">
+                    <img src="assets/brand/logo-nav.png" alt="CoinCooper" class="nav-logo-img" width="160" height="160" decoding="async">
+                </picture>
             </a>
             
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -270,9 +269,8 @@
         </div>
     </footer>
 
-    <script src="js/navigation.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/site-core.js?v=2" defer></script>
+    <script src="js/main.js" defer></script>
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             // Let Formspree handle it, just show loading state

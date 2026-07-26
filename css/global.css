@@ -78,16 +78,23 @@ html {
     background-clip: text;
 }
 
-/* Fade Up Animation */
+/* Fade Up — visible by default so first paint isn't blank while JS loads */
 .fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 769px) {
+    html.anim-ready .fade-up:not(.visible) {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    html.anim-ready .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Stagger Animation */

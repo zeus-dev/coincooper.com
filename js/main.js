@@ -135,28 +135,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Parallax effect for gradient orbs (enhanced)
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Parallax — desktop only (mobile scroll jank)
+    if (
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+        !window.matchMedia('(max-width: 768px)').matches &&
+        window.matchMedia('(pointer: fine)').matches
+    ) {
         let ticking = false;
-        
         window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrolled = window.pageYOffset;
-                    const orbs = document.querySelectorAll('.gradient-orb');
-                    
-                    orbs.forEach((orb, index) => {
-                        const speed = 0.03 + (index * 0.015);
-                        const yPos = scrolled * speed;
-                        orb.style.transform = `translateY(${yPos}px)`;
-                    });
-                    
-                    ticking = false;
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset;
+                document.querySelectorAll('.gradient-orb').forEach((orb, index) => {
+                    const speed = 0.03 + (index * 0.015);
+                    orb.style.transform = `translateY(${scrolled * speed}px)`;
                 });
-                
-                ticking = true;
-            }
-        });
+                ticking = false;
+            });
+        }, { passive: true });
     }
     
     // Enhanced scroll-triggered reveal for sections
