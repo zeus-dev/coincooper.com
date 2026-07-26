@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/hero.css?v=3">
-    <link rel="stylesheet" href="css/sections.css?v=3">
+    <link rel="stylesheet" href="css/hero.css?v=4">
+    <link rel="stylesheet" href="css/sections.css?v=4">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -47,13 +47,12 @@
             
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#platform">Platform</a></li>
-                <li><a href="#withdrawal-security">Withdrawals</a></li>
-                <li><a href="#product">Product</a></li>
+                <li><a href="#withdrawal-security">Security</a></li>
                 <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#security">Security</a></li>
                 <li><a href="#rpc-nodes">RPC Nodes</a></li>
+                <li><a href="https://cex.coincooper.com" target="_blank" rel="noopener">Live Exchange</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#demo" class="btn btn-primary btn-sm">Book a Demo</a></li>
+                <li><a href="https://cex.coincooper.com" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Try Demo</a></li>
             </ul>
         </div>
     </nav>
@@ -81,7 +80,7 @@
                     Battle-tested microservices. Enterprise security. Zero compromises.
                 </p>
                 <div class="hero-cta">
-                    <a href="#demo" class="btn btn-primary btn-lg">Book a Demo</a>
+                    <a href="https://cex.coincooper.com" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Try Live Exchange</a>
                     <a href="architecture.html" class="btn btn-ghost btn-lg">View Architecture →</a>
                 </div>
                 
@@ -194,7 +193,7 @@
                             <li class="check-item">White-label ready for your brand</li>
                         </ul>
                         <div class="solution-cta">
-                            <a href="#demo" class="btn btn-primary">See It In Action</a>
+                            <a href="https://cex.coincooper.com" class="btn btn-primary" target="_blank" rel="noopener">Try Live Exchange</a>
                         </div>
                     </div>
                 </div>
@@ -289,20 +288,6 @@
                 <p class="section-subtitle">Destination addresses are not trusted until users prove ownership — twice</p>
             </div>
 
-            <figure class="shot-card shot-card--wide fade-up">
-                <img
-                    src="assets/screenshots/04-agora-whitelist.jpg?v=2"
-                    alt="Whitelist wizard: Address, 2FA, Email OTP"
-                    width="901"
-                    height="385"
-                    loading="lazy"
-                >
-                <figcaption>
-                    <strong>Agora · Whitelist wizard</strong>
-                    <span>Address → 2FA → Email OTP before any destination is trusted</span>
-                </figcaption>
-            </figure>
-
             <div class="wl-steps fade-up">
                 <div class="wl-step">
                     <span class="wl-step-num">01</span>
@@ -326,70 +311,9 @@
                 </div>
             </div>
 
-            <figure class="shot-card shot-card--wide fade-up">
-                <img
-                    src="assets/screenshots/03-agora-withdraw.jpg?v=2"
-                    alt="Withdraw screen requiring a whitelisted destination"
-                    width="881"
-                    height="501"
-                    loading="lazy"
-                >
-                <figcaption>
-                    <strong>Agora · Withdraw</strong>
-                    <span>Payouts only to confirmed whitelist addresses</span>
-                </figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Live product gallery -->
-    <section class="section product-shots" id="product">
-        <div class="container product-shots-inner">
-            <div class="section-header fade-up">
-                <h2 class="section-title">See It Running</h2>
-                <p class="section-subtitle">Agora for traders · Sentinel for operators</p>
-            </div>
-
-            <div class="shot-stack">
-                <figure class="shot-card fade-up">
-                    <img src="assets/screenshots/02-agora-wallet.jpg?v=2" alt="Agora wallet balances" width="799" height="539" loading="lazy">
-                    <figcaption>
-                        <strong>Agora · Wallet</strong>
-                        <span>Balances, deposits, and withdrawals</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="shot-card fade-up">
-                    <img src="assets/screenshots/06-sentinel-treasury.jpg?v=2" alt="Sentinel Treasury Ops" width="865" height="554" loading="lazy">
-                    <figcaption>
-                        <strong>Sentinel · Treasury Ops</strong>
-                        <span>Platform AUM, Plutus fees, gas, hot wallets</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="shot-card fade-up">
-                    <img src="assets/screenshots/05-sentinel-dashboard.jpg?v=2" alt="Sentinel ops dashboard" width="865" height="544" loading="lazy">
-                    <figcaption>
-                        <strong>Sentinel · Dashboard</strong>
-                        <span>Health, logins, ops queues</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="shot-card fade-up">
-                    <img src="assets/screenshots/07-sentinel-rbac.jpg?v=2" alt="Roles and permissions" width="522" height="310" loading="lazy">
-                    <figcaption>
-                        <strong>Sentinel · RBAC</strong>
-                        <span>Casbin roles &amp; permissions</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="shot-card fade-up">
-                    <img src="assets/screenshots/08-sentinel-deposits.jpg?v=2" alt="Deposits table" width="1013" height="250" loading="lazy">
-                    <figcaption>
-                        <strong>Sentinel · Deposits</strong>
-                        <span>On-chain credits · confirmations · swept</span>
-                    </figcaption>
-                </figure>
+            <div class="live-demo-cta fade-up">
+                <p>See wallets, trading, whitelist, and admin tools in the live UAT exchange.</p>
+                <a href="https://cex.coincooper.com" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Open cex.coincooper.com →</a>
             </div>
         </div>
     </section>
@@ -1093,10 +1017,10 @@
         <div class="container">
             <div class="cta-content fade-up">
                 <h2>Ready to Launch Your Exchange?</h2>
-                <p>Schedule a demo and see Aetherion Exchange in action</p>
+                <p>Try the live Demo exchange, or talk to us about white-label deployment</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Demo</a>
-                    <a href="architecture.html" class="btn btn-ghost btn-lg">View Documentation</a>
+                    <a href="https://cex.coincooper.com" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Try Live Exchange</a>
+                    <a href="contact.html" class="btn btn-ghost btn-lg">Book a Call</a>
                 </div>
             </div>
         </div>

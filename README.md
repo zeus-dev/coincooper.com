@@ -9,22 +9,11 @@ Static marketing site for **CoinCooper** / **Aetherion Exchange**.
 # or: python3 -m http.server 8080
 ```
 
-## Screenshots (Jul 2026)
+## Screenshots
 
-Placed in `assets/screenshots/` and on `index.html`:
+Hero only: `assets/screenshots/01-agora-trade.jpg` (Agora trading UI).
 
-| File | Page | Site placement |
-|------|------|----------------|
-| `01-agora-trade.png` | Agora Trade | Hero |
-| `02-agora-wallet.png` | Agora Wallet | See It Running (wide) |
-| `03-agora-withdraw.png` | Agora Withdraw | Withdrawal Security |
-| `04-agora-whitelist.png` | Whitelist step 1 | Withdrawal Security |
-| `05-sentinel-dashboard.png` | Sentinel Dashboard | Product mosaic |
-| `06-sentinel-treasury.png` | Treasury Ops | Product mosaic |
-| `07-sentinel-rbac.png` | Roles & Permissions | Product mosaic |
-| `08-sentinel-deposits.png` | Deposits | Product mosaic |
-
-**Still useful if you have them:** Whitelist **2FA** step, Whitelist **Email OTP** step, Sentinel **Whitelist** revoke page.
+Everything else lives on the live UAT exchange: **https://cex.coincooper.com** — primary CTAs point there instead of a screenshot gallery.
 
 Aligned copy with the live Aetherion stack:
 
@@ -39,7 +28,6 @@ Aligned copy with the live Aetherion stack:
 
 | Priority | Idea | Why |
 |----------|------|-----|
-| High | **Product screenshots** from Agora + Sentinel (whitelist wizard, admin revoke) | Marketing currently uses CSS mockups only |
 | High | **OpenAPI / docs portal** (or link to generated Swagger) | Footer “API Reference” still points at architecture.html |
 | High | **Supported networks page** with the real seed catalog list | Replaces vague chain counts |
 | Medium | **Security deep-dive page** expanding the 4-step withdrawal flow + RBAC | Differentiator vs generic white-label CEXs |

@@ -1152,15 +1152,7 @@
     }
 }
 
-/* ===== Screenshot cards (centered stack) ===== */
-.shot-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-    width: 100%;
-}
-
+/* ===== Hero screenshot ===== */
 .shot-card {
     display: block;
     width: 100%;
@@ -1173,12 +1165,6 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
-.shot-card--wide {
-    max-width: 920px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .shot-card--hero {
     max-width: 100%;
     border-radius: 18px;
@@ -1187,39 +1173,23 @@
         0 0 60px rgba(34, 211, 238, 0.06);
 }
 
-.withdrawal-security .shot-card {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .shot-card img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.shot-card figcaption {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 14px 18px 16px;
-    background: #111827;
-    border-top: 1px solid rgba(148, 163, 184, 0.18);
+.live-demo-cta {
+    margin-top: 40px;
+    text-align: center;
+    padding: 28px 24px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.08), rgba(56, 189, 248, 0.04));
+    border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
-.shot-card figcaption strong {
-    color: #f8fafc;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-.shot-card figcaption span {
-    color: #94a3b8;
-    font-size: 0.82rem;
-}
-
-.product-shots-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+.live-demo-cta p {
+    margin: 0 0 16px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
 }
