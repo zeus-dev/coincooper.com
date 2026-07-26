@@ -34,6 +34,7 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#platform">Platform</a></li>
+                <li><a href="index.html#withdrawal-security">Withdrawals</a></li>
                 <li><a href="architecture.html">Architecture</a></li>
                 <li><a href="rpc-nodes.html">RPC Nodes</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -104,6 +105,10 @@
                         <strong>SENTINEL</strong>
                         <span>Admin UI</span>
                     </div>
+                    <div class="arch-node service">
+                        <strong>AGORA</strong>
+                        <span>Exchange UI</span>
+                    </div>
                 </div>
             </div>
             
@@ -126,20 +131,20 @@
                 
                 <div class="service-card fade-up">
                     <h4>Poseidon <span class="service-subtitle">God of the Sea</span></h4>
-                    <p>HD wallet generation and multi-chain address management. Private key storage via HashiCorp Vault, balance tracking, and withdrawal approval workflows.</p>
-                    <div class="service-tech">Go · PostgreSQL (poseidon_db) · Vault · gRPC</div>
+                    <p>HD wallet generation and multi-chain address management. Private key storage via HashiCorp Vault, balance tracking, withdrawal approvals, and destination whitelist secured by 2FA then email OTP (via Hermes).</p>
+                    <div class="service-tech">Go · PostgreSQL (poseidon_db) · Vault · Hermes</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Argos <span class="service-subtitle">All-Seeing Giant</span></h4>
-                    <p>Blockchain monitoring service tracking deposits across 200+ chains, withdrawal processing, automated sweep operations, mempool monitoring, and on-chain analytics.</p>
+                    <p>Blockchain monitoring for deposits and withdrawals across EVM, UTXO, and Solana networks — sweeps, mempool watching, and on-chain ops.</p>
                     <div class="service-tech">Go · PostgreSQL (argos_db) · Kafka · gRPC</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Hermes <span class="service-subtitle">Messenger God</span></h4>
-                    <p>Multi-channel notification service supporting Email, SMS, and Push notifications. Template management, delivery tracking, and Kafka event consumption.</p>
-                    <div class="service-tech">Go · PostgreSQL (hermes_db) · Kafka · SMTP/Twilio</div>
+                    <p>Multi-channel notifications. Email OTP for whitelist verification, templates, delivery tracking, Kafka consumers. SMTP in production; MailHog for UAT.</p>
+                    <div class="service-tech">Go · PostgreSQL (hermes_db) · Kafka · SMTP</div>
                 </div>
                 
                 <div class="service-card fade-up">
@@ -162,8 +167,8 @@
                 
                 <div class="service-card fade-up">
                     <h4>Sentinel <span class="service-subtitle">The Watchman</span></h4>
-                    <p>Comprehensive admin panel built with Next.js for user management, trading pair configuration, system monitoring, withdrawal approvals, and operational oversight.</p>
-                    <div class="service-tech">Next.js · React · REST API</div>
+                    <p>Operator admin panel: users, markets, fees, deposits/withdrawals, withdrawal whitelist revoke, custody, treasury, and system health — Casbin RBAC throughout.</p>
+                    <div class="service-tech">Vue 3 · Vite · TanStack Query · REST</div>
                 </div>
                 
                 <div class="service-card fade-up">
@@ -180,8 +185,32 @@
                 
                 <div class="service-card fade-up">
                     <h4>Agora <span class="service-subtitle">The Marketplace</span></h4>
-                    <p>User-facing exchange interface built with Next.js. Real-time trading, portfolio management, order history, and account settings.</p>
-                    <div class="service-tech">Next.js · React · WebSocket · REST API</div>
+                    <p>User-facing exchange UI: trading, wallets, deposits/withdrawals, 2FA setup, and multi-step whitelist verification.</p>
+                    <div class="service-tech">Next.js · React · WebSocket · REST</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Admin BFF <span class="service-subtitle">The Proxy</span></h4>
+                    <p>Admin API gateway that authenticates operators and proxies Poseidon, Apollo, Argos, Hermes, and fee-service under `/api/v1/admin/*`.</p>
+                    <div class="service-tech">Go · JWT · Circuit breakers</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Plutus <span class="service-subtitle">God of Wealth</span></h4>
+                    <p>Treasury and revenue visibility — fee collection stats, platform balances, and financial summaries for operators.</p>
+                    <div class="service-tech">Go · PostgreSQL · REST</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Fee Service <span class="service-subtitle">The Ledger of Rates</span></h4>
+                    <p>Maker/taker fee tiers, pair overrides, and user tier assignments used by Apollo during matching and settlement.</p>
+                    <div class="service-tech">Go · PostgreSQL · REST</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Kronos <span class="service-subtitle">Time</span></h4>
+                    <p>Scheduling and time-based jobs that keep settlement, archival, and operational workflows on cadence.</p>
+                    <div class="service-tech">Go · Cron · Kafka</div>
                 </div>
             </div>
             

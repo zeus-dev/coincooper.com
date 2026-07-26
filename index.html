@@ -47,6 +47,8 @@
             
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#platform">Platform</a></li>
+                <li><a href="#withdrawal-security">Withdrawals</a></li>
+                <li><a href="#product">Product</a></li>
                 <li><a href="#architecture">Architecture</a></li>
                 <li><a href="#security">Security</a></li>
                 <li><a href="#rpc-nodes">RPC Nodes</a></li>
@@ -88,14 +90,14 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
-                        <span>SOC 2 Ready</span>
+                        <span>Vault-Backed Keys</span>
                     </div>
                     <div class="trust-item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
                             <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
                         </svg>
-                        <span>12+ Microservices</span>
+                        <span>17 Microservices</span>
                     </div>
                     <div class="trust-item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -113,70 +115,19 @@
             </div>
             
             <div class="hero-visual">
-                <div class="dashboard-mockup">
-                    <div class="mockup-header">
-                        <div class="mockup-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <div class="mockup-title">Exchange Dashboard</div>
+                <div class="shot-frame shot-frame--hero fade-up">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">cex.coincooper.com/trade/BTC_USDT</div>
                     </div>
-                    <div class="mockup-content">
-                        <div class="mockup-sidebar">
-                            <div class="mockup-pair active">
-                                <div class="pair-name">BTC/USDT</div>
-                                <div class="pair-price">$67,234</div>
-                            </div>
-                            <div class="mockup-pair">
-                                <div class="pair-name">ETH/USDT</div>
-                                <div class="pair-price down">$3,456</div>
-                            </div>
-                            <div class="mockup-pair">
-                                <div class="pair-name">SOL/USDT</div>
-                                <div class="pair-price">$178.45</div>
-                            </div>
-                            <div class="mockup-pair">
-                                <div class="pair-name">XRP/USDT</div>
-                                <div class="pair-price">$0.5234</div>
-                            </div>
-                        </div>
-                        <div class="mockup-chart">
-                            <div class="chart-header">
-                                <span class="chart-symbol">BTC/USDT</span>
-                                <span class="chart-price">$67,234.56</span>
-                            </div>
-                            <div class="chart-area">
-                                <div class="chart-grid">
-                                    <div class="chart-grid-line"></div>
-                                    <div class="chart-grid-line"></div>
-                                    <div class="chart-grid-line"></div>
-                                    <div class="chart-grid-line"></div>
-                                </div>
-                                <div class="chart-line">
-                                    <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-                                        <defs>
-                                            <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
-                                                <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <path class="area" d="M0,45 L20,42 L40,48 L60,35 L80,38 L100,28 L120,32 L140,22 L160,25 L180,18 L200,15 L200,60 L0,60 Z"/>
-                                        <path d="M0,45 L20,42 L40,48 L60,35 L80,38 L100,28 L120,32 L140,22 L160,25 L180,18 L200,15"/>
-                                    </svg>
-                                </div>
-                                <div class="chart-volume">
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                    <div class="volume-bar"></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="shot-viewport">
+                        <img
+                            src="assets/screenshots/01-agora-trade.jpg"
+                            alt="Aetherion Agora trading interface — BTC/USDT chart, order book, and open orders"
+                            width="1600"
+                            height="900"
+                            loading="eager"
+                        >
                     </div>
                 </div>
             </div>
@@ -194,7 +145,7 @@
                             <span class="problem-number">1</span>
                             <div>
                                 <strong>Matching engine complexity</strong>
-                                <p>High-frequency order matching with sub-millisecond latency requirements</p>
+                                <p>High-frequency order matching with low-latency execution targets</p>
                             </div>
                         </li>
                         <li>
@@ -208,7 +159,7 @@
                             <span class="problem-number">3</span>
                             <div>
                                 <strong>Security compliance requirements</strong>
-                                <p>HSM key management, audit trails, penetration testing</p>
+                                <p>Vault key custody, withdrawal whitelist, audit trails</p>
                             </div>
                         </li>
                         <li>
@@ -244,7 +195,7 @@
                             <li class="check-item">Enterprise security built-in</li>
                             <li class="check-item">KYC/AML workflows pre-configured</li>
                             <li class="check-item">Real-time WebSocket feeds operational</li>
-                            <li class="check-item">HSM-grade key management active</li>
+                            <li class="check-item">Vault-backed keys + withdrawal whitelist active</li>
                             <li class="check-item">Full admin panel for management</li>
                             <li class="check-item">White-label ready for your brand</li>
                         </ul>
@@ -273,7 +224,7 @@
                         </svg>
                     </div>
                     <h3>Trading Engine</h3>
-                    <p>High-performance order matching with limit, market, and stop orders. Real-time order book with sub-millisecond updates.</p>
+                    <p>High-performance order matching with limit, market, and stop orders. Real-time order book streamed over WebSockets.</p>
                     <div class="bento-visual orderbook-animation"></div>
                 </div>
                 
@@ -284,7 +235,7 @@
                         </svg>
                     </div>
                     <h3>Wallet Infrastructure</h3>
-                    <p>HD wallet generation, multi-chain address management, automated sweeping, hot/cold wallet separation.</p>
+                    <p>HD wallets, multi-chain deposits, hot/warm/cold custody tiers, automated sweeps, and address whitelist for withdrawals.</p>
                     <div class="bento-visual wallet-animation"></div>
                 </div>
                 
@@ -319,7 +270,7 @@
                         </svg>
                     </div>
                     <h3>Admin Command Center</h3>
-                    <p>Full administrative panel — user management, trading pair config, fee management, withdrawal approvals, system monitoring.</p>
+                    <p>Sentinel admin — users, markets, fees, deposits/withdrawals, whitelist revoke, custody, treasury, and system health.</p>
                 </div>
                 
                 <div class="bento-card fade-up">
@@ -329,9 +280,200 @@
                         </svg>
                     </div>
                     <h3>Real-Time Everything</h3>
-                    <p>WebSocket feeds for orderbook, trades, tickers, user balances. Push notifications via Email, SMS, and in-app.</p>
+                    <p>WebSocket feeds for orderbook, trades, tickers, user balances. Transactional email and alerts via Hermes (SMTP / providers).</p>
                     <div class="bento-visual pulse-animation"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Withdrawal Security -->
+    <section class="section withdrawal-security" id="withdrawal-security">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Withdrawal Security</h2>
+                <p class="section-subtitle">Destination addresses are not trusted until users prove ownership — twice</p>
+            </div>
+
+            <div class="flow-steps fade-up">
+                <div class="flow-step">
+                    <div class="flow-step-num">01</div>
+                    <h3>Add address</h3>
+                    <p>User submits a withdrawal destination. It stays pending — not usable for payouts yet.</p>
+                </div>
+                <div class="flow-step-arrow" aria-hidden="true">→</div>
+                <div class="flow-step">
+                    <div class="flow-step-num">02</div>
+                    <h3>Confirm 2FA</h3>
+                    <p>Janus TOTP verification. If 2FA is off, Agora routes the user to set it up first.</p>
+                </div>
+                <div class="flow-step-arrow" aria-hidden="true">→</div>
+                <div class="flow-step">
+                    <div class="flow-step-num">03</div>
+                    <h3>Email OTP</h3>
+                    <p>Hermes emails a one-time code. Confirm to whitelist the address. Three failures resets the flow.</p>
+                </div>
+                <div class="flow-step-arrow" aria-hidden="true">→</div>
+                <div class="flow-step">
+                    <div class="flow-step-num">04</div>
+                    <h3>Admin oversight</h3>
+                    <p>Sentinel lists pending and verified addresses. Operators can revoke any destination instantly.</p>
+                </div>
+            </div>
+
+            <div class="shot-duo fade-up">
+                <figure class="shot-frame">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">cex.coincooper.com/wallet/withdraw</div>
+                    </div>
+                    <div class="shot-viewport shot-viewport--crop-top">
+                        <img
+                            src="assets/screenshots/03-agora-withdraw.jpg"
+                            alt="Withdraw screen requiring a whitelisted destination address"
+                            width="1400"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Withdraw</strong>
+                        <span>Only whitelisted destinations — networks, amount, and 2FA on submit</span>
+                    </figcaption>
+                </figure>
+                <figure class="shot-frame">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">cex.coincooper.com · Whitelist</div>
+                    </div>
+                    <div class="shot-viewport shot-viewport--crop-top">
+                        <img
+                            src="assets/screenshots/04-agora-whitelist.jpg"
+                            alt="Multi-step whitelist wizard: Address, 2FA, Email OTP"
+                            width="1400"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Whitelist wizard</strong>
+                        <span>Address → 2FA → Email OTP · 3 failures resets the flow</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live product gallery -->
+    <section class="section product-shots" id="product">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">See It Running</h2>
+                <p class="section-subtitle">Agora for traders · Sentinel for operators — same stack, live UAT</p>
+            </div>
+
+            <div class="shot-showcase fade-up">
+                <figure class="shot-frame shot-frame--wide">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">cex.coincooper.com/wallet</div>
+                    </div>
+                    <div class="shot-viewport">
+                        <img
+                            src="assets/screenshots/02-agora-wallet.jpg"
+                            alt="Aetherion wallet balances with deposit and withdraw actions"
+                            width="1600"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Agora · Wallet</strong>
+                        <span>Balances, deposits, and withdrawals under one roof</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="shot-mosaic fade-up">
+                <figure class="shot-frame">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">sentinel.coincooper.com</div>
+                    </div>
+                    <div class="shot-viewport shot-viewport--crop-side">
+                        <img
+                            src="assets/screenshots/05-sentinel-dashboard.jpg"
+                            alt="Sentinel ops dashboard with service health and login trends"
+                            width="1400"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Sentinel · Dashboard</strong>
+                        <span>Live health, KYC queue, withdrawals, engagement</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="shot-frame">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">sentinel · Treasury Ops</div>
+                    </div>
+                    <div class="shot-viewport shot-viewport--crop-side">
+                        <img
+                            src="assets/screenshots/06-sentinel-treasury.jpg"
+                            alt="Treasury Ops — platform AUM, fees, gas, hot wallets"
+                            width="1400"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Sentinel · Treasury</strong>
+                        <span>AUM, Plutus fees, gas spend, hot/user/cold mix</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="shot-frame">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">sentinel · Roles &amp; Permissions</div>
+                    </div>
+                    <div class="shot-viewport">
+                        <img
+                            src="assets/screenshots/07-sentinel-rbac.jpg"
+                            alt="Roles and permissions RBAC table in Sentinel"
+                            width="1400"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Sentinel · RBAC</strong>
+                        <span>Casbin roles — admin, compliance, trader, maker…</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="shot-frame">
+                    <div class="shot-chrome">
+                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                        <div class="shot-url">sentinel · Deposits</div>
+                    </div>
+                    <div class="shot-viewport shot-viewport--contain">
+                        <img
+                            src="assets/screenshots/08-sentinel-deposits.jpg"
+                            alt="Deposits admin table with sweep status and confirmations"
+                            width="1400"
+                            height="900"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Sentinel · Deposits</strong>
+                        <span>On-chain credits · confirmations · swept status</span>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -399,6 +541,10 @@
                         <strong>SENTINEL</strong>
                         <span>Admin UI</span>
                     </div>
+                    <div class="arch-node service">
+                        <strong>AGORA</strong>
+                        <span>Exchange UI</span>
+                    </div>
                 </div>
             </div>
             
@@ -417,20 +563,20 @@
                 
                 <div class="service-card fade-up">
                     <h4>Poseidon <span class="service-subtitle">God of the Sea</span></h4>
-                    <p>HD wallet generation, multi-chain address management, private key storage (via Vault), balance tracking, withdrawal approval</p>
-                    <div class="service-tech">Go · PostgreSQL · Vault</div>
+                    <p>HD wallets, multi-chain addresses, Vault key custody, balances, withdrawal approvals, and destination whitelist with 2FA + email OTP</p>
+                    <div class="service-tech">Go · PostgreSQL · Vault · Hermes</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Argos <span class="service-subtitle">All-Seeing Giant</span></h4>
-                    <p>Blockchain monitoring, deposit tracking, withdrawal processing, sweep operations, mempool monitoring, analytics</p>
-                    <div class="service-tech">Go · PostgreSQL · gRPC</div>
+                    <p>Blockchain monitoring, deposit tracking, withdrawal broadcast, sweeps, mempool watching — EVM, UTXO, and Solana networks</p>
+                    <div class="service-tech">Go · PostgreSQL · Kafka · gRPC</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Hermes <span class="service-subtitle">Messenger God</span></h4>
-                    <p>Email/SMS/Push notifications, notification templates, delivery tracking, Kafka event consumption</p>
-                    <div class="service-tech">Go · PostgreSQL · Kafka</div>
+                    <p>Transactional email and alerts — templates, delivery tracking, Kafka events, SMTP/provider adapters for OTP and ops mail</p>
+                    <div class="service-tech">Go · PostgreSQL · Kafka · SMTP</div>
                 </div>
                 
                 <div class="service-card fade-up">
@@ -470,9 +616,10 @@
                 <div class="tech-category fade-up">
                     <h3>Frontend</h3>
                     <div class="tech-tags">
-                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Next.js (Agora)</span>
+                        <span class="tech-tag">Vue 3 (Sentinel)</span>
                         <span class="tech-tag">WebSocket</span>
-                        <span class="tech-tag">Real-time Feeds</span>
+                        <span class="tech-tag">OpenAPI clients</span>
                     </div>
                 </div>
                 
@@ -536,8 +683,8 @@
                         <div class="security-feature-item">
                             <div class="feature-icon">🔐</div>
                             <div class="feature-text">
-                                <h4>HSM-Grade Key Management</h4>
-                                <p>HD wallets, multi-sig, HSM integration</p>
+                                <h4>Vault Key Custody</h4>
+                                <p>HD wallets, hot/warm/cold tiers, Vault secrets</p>
                             </div>
                         </div>
                     </div>
@@ -574,8 +721,8 @@
                     <div class="security-feature-card fade-up">
                         <div class="feature-glow"></div>
                         <div class="feature-icon-lg">🔐</div>
-                        <h3>HSM-Grade Key Management</h3>
-                        <p>HD wallets, multi-sig support, hardware security module integration, automated key rotation</p>
+                        <h3>Vault Key Custody</h3>
+                        <p>HD wallets with hot/warm/cold tiers. Private keys sealed in HashiCorp Vault — never in app config</p>
                         <div class="feature-tag">Keys</div>
                     </div>
                     
@@ -614,9 +761,17 @@
                     <div class="security-feature-card fade-up">
                         <div class="feature-glow"></div>
                         <div class="feature-icon-lg">🧬</div>
-                        <h3>GDPR Compliant</h3>
-                        <p>User data export, right to deletion, data retention policies, privacy by design</p>
+                        <h3>GDPR Ready Patterns</h3>
+                        <p>Data isolation per service, retention hooks, and privacy-minded defaults for exchange operators</p>
                         <div class="feature-tag">Privacy</div>
+                    </div>
+
+                    <div class="security-feature-card fade-up">
+                        <div class="feature-glow"></div>
+                        <div class="feature-icon-lg">✉️</div>
+                        <h3>Withdrawal Step-Up Auth</h3>
+                        <p>Whitelist destinations require TOTP + email OTP before any funds can leave the platform</p>
+                        <div class="feature-tag">Withdrawals</div>
                     </div>
                 </div>
             </div>
@@ -771,22 +926,22 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card fade-up">
-                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-number" data-target="17">0</div>
                     <div class="stat-label">Microservices</div>
-                    <div class="stat-description">Battle-tested architecture</div>
+                    <div class="stat-description">Event-driven CEX stack</div>
                 </div>
                 
                 <div class="stat-card fade-up">
                     <div class="stat-number" data-target="50">0</div>
                     <div class="stat-label">API Endpoints</div>
-                    <div class="stat-description">Comprehensive coverage</div>
+                    <div class="stat-description">OpenAPI-documented</div>
                 </div>
                 
                 <div class="stat-card fade-up">
                     <div class="stat-number" data-target="10">0</div>
                     <div class="stat-suffix">ms</div>
                     <div class="stat-label">Order Matching</div>
-                    <div class="stat-description">Sub-millisecond latency</div>
+                    <div class="stat-description">Low-latency target</div>
                 </div>
                 
                 <div class="stat-card fade-up">
@@ -797,10 +952,10 @@
                 </div>
                 
                 <div class="stat-card fade-up">
-                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-number" data-target="20">0</div>
                     <div class="stat-suffix">+</div>
-                    <div class="stat-label">Blockchains</div>
-                    <div class="stat-description">EVM + UTXO supported</div>
+                    <div class="stat-label">Networks</div>
+                    <div class="stat-description">EVM · UTXO · Solana</div>
                 </div>
                 
                 <div class="stat-card fade-up">
@@ -844,7 +999,7 @@
                         </tr>
                         <tr>
                             <td>Microservices Architecture</td>
-                            <td class="highlight">✅ 12+ services</td>
+                            <td class="highlight">✅ 17 services</td>
                             <td>❌ Usually monolith</td>
                             <td>⚠️ Partial</td>
                         </tr>
@@ -861,10 +1016,16 @@
                             <td>❌</td>
                         </tr>
                         <tr>
-                            <td>HSM Key Management</td>
+                            <td>Vault Key Custody</td>
                             <td class="highlight">✅</td>
                             <td>❌</td>
                             <td>⚠️</td>
+                        </tr>
+                        <tr>
+                            <td>Withdrawal Whitelist (2FA + OTP)</td>
+                            <td class="highlight">✅</td>
+                            <td>⚠️ Custom</td>
+                            <td>⚠️ Varies</td>
                         </tr>
                         <tr>
                             <td>Real-time WebSockets</td>
