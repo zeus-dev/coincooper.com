@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/hero.css?v=3">
+    <link rel="stylesheet" href="css/sections.css?v=3">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -115,9 +115,9 @@
             </div>
             
             <div class="hero-visual">
-                <figure class="device-shot device-shot--hero fade-up">
+                <figure class="shot-card shot-card--hero fade-up">
                     <img
-                        src="assets/screenshots/01-agora-trade.jpg"
+                        src="assets/screenshots/01-agora-trade.jpg?v=2"
                         alt="Aetherion trading UI — BTC/USDT chart, order book, and order ticket"
                         width="1016"
                         height="566"
@@ -289,9 +289,9 @@
                 <p class="section-subtitle">Destination addresses are not trusted until users prove ownership — twice</p>
             </div>
 
-            <figure class="device-shot device-shot--lead fade-up">
+            <figure class="shot-card shot-card--wide fade-up">
                 <img
-                    src="assets/screenshots/04-agora-whitelist.jpg"
+                    src="assets/screenshots/04-agora-whitelist.jpg?v=2"
                     alt="Whitelist wizard: Address, 2FA, Email OTP"
                     width="901"
                     height="385"
@@ -326,9 +326,9 @@
                 </div>
             </div>
 
-            <figure class="device-shot device-shot--secondary fade-up">
+            <figure class="shot-card shot-card--wide fade-up">
                 <img
-                    src="assets/screenshots/03-agora-withdraw.jpg"
+                    src="assets/screenshots/03-agora-withdraw.jpg?v=2"
                     alt="Withdraw screen requiring a whitelisted destination"
                     width="881"
                     height="501"
@@ -344,86 +344,53 @@
 
     <!-- Live product gallery -->
     <section class="section product-shots" id="product">
-        <div class="container">
+        <div class="container product-shots-inner">
             <div class="section-header fade-up">
                 <h2 class="section-title">See It Running</h2>
                 <p class="section-subtitle">Agora for traders · Sentinel for operators</p>
             </div>
 
-            <figure class="device-shot device-shot--lead fade-up">
-                <img
-                    src="assets/screenshots/02-agora-wallet.jpg"
-                    alt="Wallet balances overview"
-                    width="799"
-                    height="539"
-                    loading="lazy"
-                >
-                <figcaption>
-                    <strong>Agora · Wallet</strong>
-                    <span>Balances, deposits, and withdrawals</span>
-                </figcaption>
-            </figure>
+            <div class="shot-stack">
+                <figure class="shot-card fade-up">
+                    <img src="assets/screenshots/02-agora-wallet.jpg?v=2" alt="Agora wallet balances" width="799" height="539" loading="lazy">
+                    <figcaption>
+                        <strong>Agora · Wallet</strong>
+                        <span>Balances, deposits, and withdrawals</span>
+                    </figcaption>
+                </figure>
 
-            <figure class="device-shot device-shot--lead fade-up">
-                <img
-                    src="assets/screenshots/06-sentinel-treasury.jpg"
-                    alt="Treasury Ops AUM and asset mix"
-                    width="865"
-                    height="554"
-                    loading="lazy"
-                >
-                <figcaption>
-                    <strong>Sentinel · Treasury Ops</strong>
-                    <span>Platform AUM, Plutus fees, gas, hot wallets</span>
-                </figcaption>
-            </figure>
+                <figure class="shot-card fade-up">
+                    <img src="assets/screenshots/06-sentinel-treasury.jpg?v=2" alt="Sentinel Treasury Ops" width="865" height="554" loading="lazy">
+                    <figcaption>
+                        <strong>Sentinel · Treasury Ops</strong>
+                        <span>Platform AUM, Plutus fees, gas, hot wallets</span>
+                    </figcaption>
+                </figure>
 
-            <div class="product-pair fade-up">
-                <figure class="device-shot">
-                    <div class="device-media">
-                        <img
-                            src="assets/screenshots/05-sentinel-dashboard.jpg"
-                            alt="Ops dashboard with health charts"
-                            width="865"
-                            height="544"
-                            loading="lazy"
-                        >
-                    </div>
+                <figure class="shot-card fade-up">
+                    <img src="assets/screenshots/05-sentinel-dashboard.jpg?v=2" alt="Sentinel ops dashboard" width="865" height="544" loading="lazy">
                     <figcaption>
                         <strong>Sentinel · Dashboard</strong>
                         <span>Health, logins, ops queues</span>
                     </figcaption>
                 </figure>
-                <figure class="device-shot">
-                    <div class="device-media">
-                        <img
-                            src="assets/screenshots/07-sentinel-rbac.jpg"
-                            alt="Roles and permissions table"
-                            width="522"
-                            height="310"
-                            loading="lazy"
-                        >
-                    </div>
+
+                <figure class="shot-card fade-up">
+                    <img src="assets/screenshots/07-sentinel-rbac.jpg?v=2" alt="Roles and permissions" width="522" height="310" loading="lazy">
                     <figcaption>
                         <strong>Sentinel · RBAC</strong>
                         <span>Casbin roles &amp; permissions</span>
                     </figcaption>
                 </figure>
-            </div>
 
-            <figure class="device-shot device-shot--lead fade-up">
-                <img
-                    src="assets/screenshots/08-sentinel-deposits.jpg"
-                    alt="Deposits table with sweep and confirmations"
-                    width="1013"
-                    height="250"
-                    loading="lazy"
-                >
-                <figcaption>
-                    <strong>Sentinel · Deposits</strong>
-                    <span>On-chain credits · confirmations · swept</span>
-                </figcaption>
-            </figure>
+                <figure class="shot-card fade-up">
+                    <img src="assets/screenshots/08-sentinel-deposits.jpg?v=2" alt="Deposits table" width="1013" height="250" loading="lazy">
+                    <figcaption>
+                        <strong>Sentinel · Deposits</strong>
+                        <span>On-chain credits · confirmations · swept</span>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </section>
 
