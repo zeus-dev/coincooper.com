@@ -37,9 +37,11 @@ Aligned copy with the live Aetherion stack:
 | Low | Honest pricing (remove “Coming Soon” overlay when ready) | Conversion |
 | Low | Lighten brand: less purple-glow SaaS, more product photography | Brand differentiation |
 
-## Pages
+## Site structure
 
-- `index.html` — homepage
-- `architecture.html` — service catalog
-- `rpc-nodes.html` — RPC product
-- `contact.html` — demo form
+- `index.html` — CoinCooper company home (products)
+- `exchange.html` — Aetherion Exchange product page
+- `architecture.html` — Aetherion service catalog
+- `contact.html` — contact form
+- `rpc-nodes.html` — RPC preview (product cooking / coming soon)
+- Favicons from logo: `favicon.ico`, `assets/favicon/*`
