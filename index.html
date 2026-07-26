@@ -115,21 +115,15 @@
             </div>
             
             <div class="hero-visual">
-                <div class="shot-frame shot-frame--hero fade-up">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">cex.coincooper.com/trade/BTC_USDT</div>
-                    </div>
-                    <div class="shot-viewport">
-                        <img
-                            src="assets/screenshots/01-agora-trade.jpg"
-                            alt="Aetherion Agora trading interface — BTC/USDT chart, order book, and open orders"
-                            width="1600"
-                            height="900"
-                            loading="eager"
-                        >
-                    </div>
-                </div>
+                <figure class="device-shot device-shot--hero fade-up">
+                    <img
+                        src="assets/screenshots/01-agora-trade.jpg"
+                        alt="Aetherion trading UI — BTC/USDT chart, order book, and order ticket"
+                        width="1016"
+                        height="566"
+                        loading="eager"
+                    >
+                </figure>
             </div>
         </div>
     </section>
@@ -321,45 +315,31 @@
                 </div>
             </div>
 
-            <div class="shot-duo fade-up">
-                <figure class="shot-frame">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">cex.coincooper.com/wallet/withdraw</div>
-                    </div>
-                    <div class="shot-viewport shot-viewport--crop-top">
+            <div class="device-feature fade-up">
+                <figure class="device-shot device-shot--feature">
+                    <img
+                        src="assets/screenshots/04-agora-whitelist.jpg"
+                        alt="Whitelist wizard with Address, 2FA, and Email OTP steps"
+                        width="881"
+                        height="371"
+                        loading="lazy"
+                    >
+                </figure>
+                <div class="device-feature-copy">
+                    <p class="device-kicker">Agora · Withdraw whitelist</p>
+                    <h3>Address → 2FA → Email OTP</h3>
+                    <p>Destinations stay pending until Janus TOTP and Hermes email OTP both pass. Three failures resets the flow.</p>
+                    <figure class="device-shot device-shot--inset">
                         <img
                             src="assets/screenshots/03-agora-withdraw.jpg"
-                            alt="Withdraw screen requiring a whitelisted destination address"
-                            width="1400"
-                            height="900"
+                            alt="Withdraw form gated behind whitelisted destinations"
+                            width="861"
+                            height="485"
                             loading="lazy"
                         >
-                    </div>
-                    <figcaption>
-                        <strong>Withdraw</strong>
-                        <span>Only whitelisted destinations — networks, amount, and 2FA on submit</span>
-                    </figcaption>
-                </figure>
-                <figure class="shot-frame">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">cex.coincooper.com · Whitelist</div>
-                    </div>
-                    <div class="shot-viewport shot-viewport--crop-top">
-                        <img
-                            src="assets/screenshots/04-agora-whitelist.jpg"
-                            alt="Multi-step whitelist wizard: Address, 2FA, Email OTP"
-                            width="1400"
-                            height="900"
-                            loading="lazy"
-                        >
-                    </div>
-                    <figcaption>
-                        <strong>Whitelist wizard</strong>
-                        <span>Address → 2FA → Email OTP · 3 failures resets the flow</span>
-                    </figcaption>
-                </figure>
+                    </figure>
+                    <p class="device-caption">Withdraw only to confirmed whitelist addresses</p>
+                </div>
             </div>
         </div>
     </section>
@@ -369,112 +349,32 @@
         <div class="container">
             <div class="section-header fade-up">
                 <h2 class="section-title">See It Running</h2>
-                <p class="section-subtitle">Agora for traders · Sentinel for operators — same stack, live UAT</p>
+                <p class="section-subtitle">Agora for traders · Sentinel for operators</p>
             </div>
 
-            <div class="shot-showcase fade-up">
-                <figure class="shot-frame shot-frame--wide">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">cex.coincooper.com/wallet</div>
-                    </div>
-                    <div class="shot-viewport">
-                        <img
-                            src="assets/screenshots/02-agora-wallet.jpg"
-                            alt="Aetherion wallet balances with deposit and withdraw actions"
-                            width="1600"
-                            height="900"
-                            loading="lazy"
-                        >
-                    </div>
-                    <figcaption>
-                        <strong>Agora · Wallet</strong>
-                        <span>Balances, deposits, and withdrawals under one roof</span>
-                    </figcaption>
+            <div class="device-grid fade-up">
+                <figure class="device-shot">
+                    <img src="assets/screenshots/02-agora-wallet.jpg" alt="Wallet balances overview" width="779" height="531" loading="lazy">
+                    <figcaption><strong>Agora · Wallet</strong><span>Balances, deposit &amp; withdraw</span></figcaption>
+                </figure>
+                <figure class="device-shot">
+                    <img src="assets/screenshots/06-sentinel-treasury.jpg" alt="Treasury Ops AUM and asset mix" width="843" height="546" loading="lazy">
+                    <figcaption><strong>Sentinel · Treasury</strong><span>AUM, fees, gas, hot wallets</span></figcaption>
+                </figure>
+                <figure class="device-shot">
+                    <img src="assets/screenshots/05-sentinel-dashboard.jpg" alt="Ops dashboard with health charts" width="843" height="514" loading="lazy">
+                    <figcaption><strong>Sentinel · Dashboard</strong><span>Health, logins, ops queues</span></figcaption>
+                </figure>
+                <figure class="device-shot">
+                    <img src="assets/screenshots/07-sentinel-rbac.jpg" alt="Roles and permissions table" width="553" height="322" loading="lazy">
+                    <figcaption><strong>Sentinel · RBAC</strong><span>Casbin roles &amp; permissions</span></figcaption>
                 </figure>
             </div>
 
-            <div class="shot-mosaic fade-up">
-                <figure class="shot-frame">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">sentinel.coincooper.com</div>
-                    </div>
-                    <div class="shot-viewport shot-viewport--crop-side">
-                        <img
-                            src="assets/screenshots/05-sentinel-dashboard.jpg"
-                            alt="Sentinel ops dashboard with service health and login trends"
-                            width="1400"
-                            height="900"
-                            loading="lazy"
-                        >
-                    </div>
-                    <figcaption>
-                        <strong>Sentinel · Dashboard</strong>
-                        <span>Live health, KYC queue, withdrawals, engagement</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="shot-frame">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">sentinel · Treasury Ops</div>
-                    </div>
-                    <div class="shot-viewport shot-viewport--crop-side">
-                        <img
-                            src="assets/screenshots/06-sentinel-treasury.jpg"
-                            alt="Treasury Ops — platform AUM, fees, gas, hot wallets"
-                            width="1400"
-                            height="900"
-                            loading="lazy"
-                        >
-                    </div>
-                    <figcaption>
-                        <strong>Sentinel · Treasury</strong>
-                        <span>AUM, Plutus fees, gas spend, hot/user/cold mix</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="shot-frame">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">sentinel · Roles &amp; Permissions</div>
-                    </div>
-                    <div class="shot-viewport">
-                        <img
-                            src="assets/screenshots/07-sentinel-rbac.jpg"
-                            alt="Roles and permissions RBAC table in Sentinel"
-                            width="1400"
-                            height="900"
-                            loading="lazy"
-                        >
-                    </div>
-                    <figcaption>
-                        <strong>Sentinel · RBAC</strong>
-                        <span>Casbin roles — admin, compliance, trader, maker…</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="shot-frame">
-                    <div class="shot-chrome">
-                        <div class="mockup-dots"><span></span><span></span><span></span></div>
-                        <div class="shot-url">sentinel · Deposits</div>
-                    </div>
-                    <div class="shot-viewport shot-viewport--contain">
-                        <img
-                            src="assets/screenshots/08-sentinel-deposits.jpg"
-                            alt="Deposits admin table with sweep status and confirmations"
-                            width="1400"
-                            height="900"
-                            loading="lazy"
-                        >
-                    </div>
-                    <figcaption>
-                        <strong>Sentinel · Deposits</strong>
-                        <span>On-chain credits · confirmations · swept status</span>
-                    </figcaption>
-                </figure>
-            </div>
+            <figure class="device-shot device-shot--strip fade-up">
+                <img src="assets/screenshots/08-sentinel-deposits.jpg" alt="Deposits table with sweep and confirmations" width="1003" height="250" loading="lazy">
+                <figcaption><strong>Sentinel · Deposits</strong><span>On-chain credits · confirmations · swept</span></figcaption>
+            </figure>
         </div>
     </section>
 

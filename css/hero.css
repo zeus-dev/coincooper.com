@@ -178,7 +178,11 @@
 /* Dashboard Visual */
 .hero-visual {
     position: relative;
-    perspective: 1500px;
+    perspective: none;
+}
+
+.hero-visual .device-shot--hero {
+    max-width: 100%;
 }
 
 /* Dashboard Mockup - Premium 3D */
