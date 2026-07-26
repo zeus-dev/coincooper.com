@@ -370,10 +370,44 @@
     font-size: clamp(1.8rem, 3.5vw, 2.5rem);
     font-weight: 800;
     margin: 0 0 12px;
+    color: #f1f5f9;
+    background: none;
+    -webkit-text-fill-color: unset;
+}
+
+.home-contact h2 .grad {
     background: linear-gradient(115deg, #e0f2fe, #c4b5fd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Home footer — solid 4-col layout */
+.home-page .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.home-page .footer-bottom {
+    justify-content: flex-start;
+}
+
+.home-page .footer-copyright {
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .home-page .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .home-page .footer-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .home-contact p {
