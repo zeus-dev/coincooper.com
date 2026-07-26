@@ -32,7 +32,7 @@ Aligned copy with the live Aetherion stack:
 - Sentinel = Vue 3 admin (not Next.js); Agora = Next.js user UI
 - Hermes as the notification path (MailHog UAT / SMTP prod)
 - Softened overclaims (SOC 2 → Vault-backed keys; 200+ chains → 20+ networks; HSM → Vault custody)
-- Architecture page: Admin BFF, Plutus, Fee Service, Kronos
+- Architecture page: Envoy gateway, Admin BFF, Plutus, Fee Service, Analytics (no Traefik / Kronos)
 - Stats: 17 microservices
 
 ## Ideas — what to add next

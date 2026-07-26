@@ -1100,58 +1100,66 @@
     }
 }
 
-/* ===== Withdrawal security flow ===== */
-.withdrawal-security .flow-steps {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: wrap;
+/* ===== Withdrawal security ===== */
+.withdrawal-security .device-shot--lead {
+    margin-top: 8px;
+    margin-bottom: 36px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.flow-step {
-    flex: 1 1 180px;
-    background: linear-gradient(135deg, rgba(26, 34, 54, 0.7) 0%, rgba(17, 25, 39, 0.5) 100%);
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-lg);
-    padding: 28px 22px;
-    min-width: 160px;
+.withdrawal-security .device-shot--secondary {
+    max-width: 860px;
+    margin: 36px auto 0;
 }
 
-.flow-step-num {
+.wl-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.wl-step {
+    background: rgba(17, 25, 39, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 14px;
+    padding: 22px 18px;
+    min-width: 0;
+}
+
+.wl-step-num {
+    display: block;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     letter-spacing: 0.08em;
-    color: var(--accent-tertiary);
-    margin-bottom: 12px;
+    color: #22d3ee;
+    margin-bottom: 10px;
 }
 
-.flow-step h3 {
-    font-size: 1.05rem;
+.wl-step h3 {
     margin: 0 0 8px;
+    font-size: 1rem;
     color: var(--text-primary);
 }
 
-.flow-step p {
+.wl-step p {
     margin: 0;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+    font-size: 0.875rem;
     line-height: 1.5;
-}
-
-.flow-step-arrow {
-    display: flex;
-    align-items: center;
-    color: var(--accent-primary);
-    font-size: 1.25rem;
-    opacity: 0.7;
-    flex: 0 0 auto;
-    padding-top: 8px;
+    color: var(--text-secondary);
 }
 
 @media (max-width: 900px) {
-    .flow-step-arrow {
-        display: none;
+    .wl-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .wl-steps {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1195,6 +1203,39 @@
     font-size: 0.8rem;
 }
 
+/* Product gallery */
+.product-shots .device-shot--lead {
+    max-width: 960px;
+    margin: 0 auto 28px;
+}
+
+.product-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 960px;
+    margin: 0 auto 28px;
+}
+
+.product-pair .device-media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #05070a;
+}
+
+.product-pair .device-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+@media (max-width: 800px) {
+    .product-pair {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Hero product shot — soft float, no fake browser chrome */
 .device-shot--hero {
     border-radius: 18px;
@@ -1211,76 +1252,4 @@
     pointer-events: none;
     border-radius: inherit;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-/* Withdrawal feature layout */
-.device-feature {
-    display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    gap: 28px;
-    align-items: start;
-    margin-top: 48px;
-}
-
-.device-feature-copy {
-    padding-top: 8px;
-}
-
-.device-kicker {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent-cyan, #22d3ee);
-    margin: 0 0 10px;
-}
-
-.device-feature-copy h3 {
-    margin: 0 0 10px;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-}
-
-.device-feature-copy > p {
-    margin: 0 0 20px;
-    color: var(--text-secondary);
-    line-height: 1.55;
-    font-size: 0.95rem;
-}
-
-.device-shot--inset {
-    margin-top: 4px;
-}
-
-.device-caption {
-    margin: 10px 0 0;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-/* Product grid */
-.device-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-}
-
-.device-shot--strip {
-    margin-top: 22px;
-}
-
-.device-shot--strip img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-@media (max-width: 960px) {
-    .device-feature {
-        grid-template-columns: 1fr;
-    }
-
-    .device-grid {
-        grid-template-columns: 1fr;
-    }
 }

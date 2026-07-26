@@ -289,58 +289,56 @@
                 <p class="section-subtitle">Destination addresses are not trusted until users prove ownership — twice</p>
             </div>
 
-            <div class="flow-steps fade-up">
-                <div class="flow-step">
-                    <div class="flow-step-num">01</div>
+            <figure class="device-shot device-shot--lead fade-up">
+                <img
+                    src="assets/screenshots/04-agora-whitelist.jpg"
+                    alt="Whitelist wizard: Address, 2FA, Email OTP"
+                    width="901"
+                    height="385"
+                    loading="lazy"
+                >
+                <figcaption>
+                    <strong>Agora · Whitelist wizard</strong>
+                    <span>Address → 2FA → Email OTP before any destination is trusted</span>
+                </figcaption>
+            </figure>
+
+            <div class="wl-steps fade-up">
+                <div class="wl-step">
+                    <span class="wl-step-num">01</span>
                     <h3>Add address</h3>
-                    <p>User submits a withdrawal destination. It stays pending — not usable for payouts yet.</p>
+                    <p>Pending until verified — not usable for payouts yet.</p>
                 </div>
-                <div class="flow-step-arrow" aria-hidden="true">→</div>
-                <div class="flow-step">
-                    <div class="flow-step-num">02</div>
+                <div class="wl-step">
+                    <span class="wl-step-num">02</span>
                     <h3>Confirm 2FA</h3>
-                    <p>Janus TOTP verification. If 2FA is off, Agora routes the user to set it up first.</p>
+                    <p>Janus TOTP. If 2FA is off, Agora sends the user to set it up.</p>
                 </div>
-                <div class="flow-step-arrow" aria-hidden="true">→</div>
-                <div class="flow-step">
-                    <div class="flow-step-num">03</div>
+                <div class="wl-step">
+                    <span class="wl-step-num">03</span>
                     <h3>Email OTP</h3>
-                    <p>Hermes emails a one-time code. Confirm to whitelist the address. Three failures resets the flow.</p>
+                    <p>Hermes emails a one-time code. Three failures resets the flow.</p>
                 </div>
-                <div class="flow-step-arrow" aria-hidden="true">→</div>
-                <div class="flow-step">
-                    <div class="flow-step-num">04</div>
+                <div class="wl-step">
+                    <span class="wl-step-num">04</span>
                     <h3>Admin oversight</h3>
-                    <p>Sentinel lists pending and verified addresses. Operators can revoke any destination instantly.</p>
+                    <p>Sentinel can list and revoke any destination instantly.</p>
                 </div>
             </div>
 
-            <div class="device-feature fade-up">
-                <figure class="device-shot device-shot--feature">
-                    <img
-                        src="assets/screenshots/04-agora-whitelist.jpg"
-                        alt="Whitelist wizard with Address, 2FA, and Email OTP steps"
-                        width="881"
-                        height="371"
-                        loading="lazy"
-                    >
-                </figure>
-                <div class="device-feature-copy">
-                    <p class="device-kicker">Agora · Withdraw whitelist</p>
-                    <h3>Address → 2FA → Email OTP</h3>
-                    <p>Destinations stay pending until Janus TOTP and Hermes email OTP both pass. Three failures resets the flow.</p>
-                    <figure class="device-shot device-shot--inset">
-                        <img
-                            src="assets/screenshots/03-agora-withdraw.jpg"
-                            alt="Withdraw form gated behind whitelisted destinations"
-                            width="861"
-                            height="485"
-                            loading="lazy"
-                        >
-                    </figure>
-                    <p class="device-caption">Withdraw only to confirmed whitelist addresses</p>
-                </div>
-            </div>
+            <figure class="device-shot device-shot--secondary fade-up">
+                <img
+                    src="assets/screenshots/03-agora-withdraw.jpg"
+                    alt="Withdraw screen requiring a whitelisted destination"
+                    width="881"
+                    height="501"
+                    loading="lazy"
+                >
+                <figcaption>
+                    <strong>Agora · Withdraw</strong>
+                    <span>Payouts only to confirmed whitelist addresses</span>
+                </figcaption>
+            </figure>
         </div>
     </section>
 
@@ -352,28 +350,79 @@
                 <p class="section-subtitle">Agora for traders · Sentinel for operators</p>
             </div>
 
-            <div class="device-grid fade-up">
+            <figure class="device-shot device-shot--lead fade-up">
+                <img
+                    src="assets/screenshots/02-agora-wallet.jpg"
+                    alt="Wallet balances overview"
+                    width="799"
+                    height="539"
+                    loading="lazy"
+                >
+                <figcaption>
+                    <strong>Agora · Wallet</strong>
+                    <span>Balances, deposits, and withdrawals</span>
+                </figcaption>
+            </figure>
+
+            <figure class="device-shot device-shot--lead fade-up">
+                <img
+                    src="assets/screenshots/06-sentinel-treasury.jpg"
+                    alt="Treasury Ops AUM and asset mix"
+                    width="865"
+                    height="554"
+                    loading="lazy"
+                >
+                <figcaption>
+                    <strong>Sentinel · Treasury Ops</strong>
+                    <span>Platform AUM, Plutus fees, gas, hot wallets</span>
+                </figcaption>
+            </figure>
+
+            <div class="product-pair fade-up">
                 <figure class="device-shot">
-                    <img src="assets/screenshots/02-agora-wallet.jpg" alt="Wallet balances overview" width="779" height="531" loading="lazy">
-                    <figcaption><strong>Agora · Wallet</strong><span>Balances, deposit &amp; withdraw</span></figcaption>
+                    <div class="device-media">
+                        <img
+                            src="assets/screenshots/05-sentinel-dashboard.jpg"
+                            alt="Ops dashboard with health charts"
+                            width="865"
+                            height="544"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Sentinel · Dashboard</strong>
+                        <span>Health, logins, ops queues</span>
+                    </figcaption>
                 </figure>
                 <figure class="device-shot">
-                    <img src="assets/screenshots/06-sentinel-treasury.jpg" alt="Treasury Ops AUM and asset mix" width="843" height="546" loading="lazy">
-                    <figcaption><strong>Sentinel · Treasury</strong><span>AUM, fees, gas, hot wallets</span></figcaption>
-                </figure>
-                <figure class="device-shot">
-                    <img src="assets/screenshots/05-sentinel-dashboard.jpg" alt="Ops dashboard with health charts" width="843" height="514" loading="lazy">
-                    <figcaption><strong>Sentinel · Dashboard</strong><span>Health, logins, ops queues</span></figcaption>
-                </figure>
-                <figure class="device-shot">
-                    <img src="assets/screenshots/07-sentinel-rbac.jpg" alt="Roles and permissions table" width="553" height="322" loading="lazy">
-                    <figcaption><strong>Sentinel · RBAC</strong><span>Casbin roles &amp; permissions</span></figcaption>
+                    <div class="device-media">
+                        <img
+                            src="assets/screenshots/07-sentinel-rbac.jpg"
+                            alt="Roles and permissions table"
+                            width="522"
+                            height="310"
+                            loading="lazy"
+                        >
+                    </div>
+                    <figcaption>
+                        <strong>Sentinel · RBAC</strong>
+                        <span>Casbin roles &amp; permissions</span>
+                    </figcaption>
                 </figure>
             </div>
 
-            <figure class="device-shot device-shot--strip fade-up">
-                <img src="assets/screenshots/08-sentinel-deposits.jpg" alt="Deposits table with sweep and confirmations" width="1003" height="250" loading="lazy">
-                <figcaption><strong>Sentinel · Deposits</strong><span>On-chain credits · confirmations · swept</span></figcaption>
+            <figure class="device-shot device-shot--lead fade-up">
+                <img
+                    src="assets/screenshots/08-sentinel-deposits.jpg"
+                    alt="Deposits table with sweep and confirmations"
+                    width="1013"
+                    height="250"
+                    loading="lazy"
+                >
+                <figcaption>
+                    <strong>Sentinel · Deposits</strong>
+                    <span>On-chain credits · confirmations · swept</span>
+                </figcaption>
             </figure>
         </div>
     </section>
@@ -389,15 +438,15 @@
             <div class="architecture-diagram fade-up">
                 <div class="arch-layer">
                     <div class="arch-node gateway">
-                        <strong>TRAEFIK API GATEWAY</strong>
-                        <span>TLS 1.3 · Rate Limiting · Load Balancing</span>
+                        <strong>ENVOY API GATEWAY</strong>
+                        <span>TLS · Routing · Rate Limiting</span>
                     </div>
                 </div>
                 
                 <div class="arch-layer">
                     <div class="arch-node service">
                         <strong>JANUS</strong>
-                        <span>Auth · KYC</span>
+                        <span>Auth · KYC · RBAC</span>
                     </div>
                     <div class="arch-node service">
                         <strong>APOLLO</strong>
@@ -405,7 +454,7 @@
                     </div>
                     <div class="arch-node service">
                         <strong>POSEIDON</strong>
-                        <span>Wallets · Keys</span>
+                        <span>Wallets · Whitelist</span>
                     </div>
                     <div class="arch-node service">
                         <strong>ARGOS</strong>
@@ -430,12 +479,16 @@
                         <span>Notifications</span>
                     </div>
                     <div class="arch-node service">
-                        <strong>THEMIS</strong>
-                        <span>Archive</span>
+                        <strong>ADMIN</strong>
+                        <span>Admin BFF</span>
                     </div>
                     <div class="arch-node service">
-                        <strong>AUDIT-LOG</strong>
-                        <span>Immutable Logs</span>
+                        <strong>PLUTUS</strong>
+                        <span>Treasury · Fees</span>
+                    </div>
+                    <div class="arch-node service">
+                        <strong>FEE-SERVICE</strong>
+                        <span>Tiers · Pairs</span>
                     </div>
                     <div class="arch-node service">
                         <strong>SENTINEL</strong>
@@ -450,39 +503,75 @@
             
             <div class="services-grid">
                 <div class="service-card fade-up">
+                    <h4>Envoy <span class="service-subtitle">Edge Gateway</span></h4>
+                    <p>API gateway for TLS termination, request routing, and rate limiting — the single entry to the exchange APIs</p>
+                    <div class="service-tech">Envoy Proxy · TLS · HTTP/2</div>
+                </div>
+
+                <div class="service-card fade-up">
                     <h4>Janus <span class="service-subtitle">God of Doorways</span></h4>
-                    <p>Authentication, JWT tokens (RS256), sessions, KYC workflows, RBAC (Casbin), 2FA, user management</p>
-                    <div class="service-tech">Go · PostgreSQL · Redis</div>
+                    <p>Authentication, JWT sessions, KYC workflows, Casbin RBAC, TOTP 2FA, user and operator management</p>
+                    <div class="service-tech">Go · PostgreSQL · Redis · Casbin</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Apollo <span class="service-subtitle">God of Order</span></h4>
-                    <p>High-frequency trading engine, order matching (limit/market/stop), balance management, fee engine, order book</p>
-                    <div class="service-tech">Go · PostgreSQL · Kafka</div>
+                    <p>Matching engine for limit/market/stop orders, balances, candles (InfluxDB), and real-time order books</p>
+                    <div class="service-tech">Go · PostgreSQL · Kafka · InfluxDB</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Poseidon <span class="service-subtitle">God of the Sea</span></h4>
-                    <p>HD wallets, multi-chain addresses, Vault key custody, balances, withdrawal approvals, and destination whitelist with 2FA + email OTP</p>
+                    <p>HD wallets, multi-chain addresses, Vault custody, withdrawals, and destination whitelist (2FA + email OTP via Hermes)</p>
                     <div class="service-tech">Go · PostgreSQL · Vault · Hermes</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Argos <span class="service-subtitle">All-Seeing Giant</span></h4>
-                    <p>Blockchain monitoring, deposit tracking, withdrawal broadcast, sweeps, mempool watching — EVM, UTXO, and Solana networks</p>
+                    <p>On-chain deposit detection, withdrawal broadcast, sweeps, and mempool watching across EVM, UTXO, and Solana</p>
                     <div class="service-tech">Go · PostgreSQL · Kafka · gRPC</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Hermes <span class="service-subtitle">Messenger God</span></h4>
-                    <p>Transactional email and alerts — templates, delivery tracking, Kafka events, SMTP/provider adapters for OTP and ops mail</p>
+                    <p>Transactional email and alerts — whitelist OTP, templates, delivery tracking; SMTP in prod, MailHog in UAT</p>
                     <div class="service-tech">Go · PostgreSQL · Kafka · SMTP</div>
                 </div>
                 
                 <div class="service-card fade-up">
                     <h4>Echo <span class="service-subtitle">Nymph of Sound</span></h4>
-                    <p>WebSocket real-time feeds — orderbook, trades, tickers, user streams, admin streams</p>
+                    <p>WebSocket feeds — orderbook, trades, tickers, user and admin streams</p>
                     <div class="service-tech">Go · Kafka · WebSocket</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Admin BFF <span class="service-subtitle">The Proxy</span></h4>
+                    <p>Operator API gateway — authenticates Sentinel sessions and proxies Poseidon, Apollo, Argos, Hermes, and fee-service</p>
+                    <div class="service-tech">Go · JWT · Circuit breakers</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Plutus <span class="service-subtitle">God of Wealth</span></h4>
+                    <p>Treasury and revenue — fee collection, platform balances, financial summaries for Sentinel Treasury Ops</p>
+                    <div class="service-tech">Go · PostgreSQL · REST</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Fee Service <span class="service-subtitle">The Ledger of Rates</span></h4>
+                    <p>Maker/taker fee tiers, pair overrides, and user tier assignments used during matching and settlement</p>
+                    <div class="service-tech">Go · PostgreSQL · REST</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Sentinel <span class="service-subtitle">The Watchman</span></h4>
+                    <p>Operator admin — users, markets, fees, deposits/withdrawals, whitelist, custody, treasury, RBAC</p>
+                    <div class="service-tech">Vue 3 · Vite · TanStack Query</div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <h4>Agora <span class="service-subtitle">The Marketplace</span></h4>
+                    <p>User exchange UI — trading, wallets, deposits/withdrawals, 2FA setup, whitelist verification</p>
+                    <div class="service-tech">Next.js · React · WebSocket</div>
                 </div>
             </div>
             
@@ -539,12 +628,11 @@
                     <h3>DevOps & Monitoring</h3>
                     <div class="tech-tags">
                         <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Traefik v3</span>
+                        <span class="tech-tag">Envoy Proxy</span>
                         <span class="tech-tag">Prometheus</span>
                         <span class="tech-tag">Grafana</span>
                         <span class="tech-tag">InfluxDB</span>
-                        <span class="tech-tag">Jaeger</span>
+                        <span class="tech-tag">MailHog (UAT)</span>
                         <span class="tech-tag">GitHub Actions</span>
                     </div>
                 </div>
